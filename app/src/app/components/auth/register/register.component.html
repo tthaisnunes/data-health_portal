@@ -1,0 +1,51 @@
+<div class="container">
+  <div class="logo" routerLink="">
+    <img src="../../../../assets/images/logo.png" alt="logo">
+  </div>
+  <div class="content-form">
+    <h3 class="title">Cadastro</h3>
+    <form class="form">
+      <mat-form-field class="full-width" appearance="fill">
+        <mat-label>Nome completo</mat-label>
+        <input matInput placeholder="João" type="text" value="">
+      </mat-form-field>
+
+      <mat-form-field class="full-width" appearance="fill">
+        <mat-label>E-mail</mat-label>
+        <input matInput placeholder="user@gmail.com" type="email" value="">
+      </mat-form-field>
+
+      <mat-form-field class="full-width" appearance="fill">
+        <mat-label>CPF</mat-label>
+        <input matInput placeholder="xxx.xxx.xxx-xx" type="number" value="">
+      </mat-form-field>
+
+      <mat-form-field class="full-width" appearance="fill">
+        <mat-label>Telefone</mat-label>
+        <input matInput placeholder="+55 (11) 99999-9999" type="tel" value="">
+      </mat-form-field>
+
+      <mat-form-field class="full-width" appearance="fill">
+        <mat-label>Data de nascimento</mat-label>
+        <input matInput [matDatepicker]="picker">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+
+      <mat-form-field class="full-width" appearance="fill">
+        <mat-label>Senha</mat-label>
+        <input matInput placeholder="***" value="" type="{{visible ? 'text' : 'password'}}">
+        <mat-icon matSuffix color="accent" (click)="changeVisibility()">{{visible ? 'visibility' : 'visibility_off'}}
+        </mat-icon>
+      </mat-form-field>
+      <button mat-flat-button color="primary">Cadastrar</button>
+    </form>
+
+    <div class="divider"></div>
+
+    <section class="register">
+      <p>Já possui uma conta?</p>
+      <a mat-flat-button color="accent" routerLink="/auth/login">Entrar</a>
+    </section>
+  </div>
+</div>
