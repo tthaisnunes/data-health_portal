@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './components/auth/login/login.component';
 import { RegisterComponent } from './components/auth/register/register.component';
 import { ForgotPasswordComponent } from './components/auth/forgot-password/forgot-password.component';
-import { DashboardComponent } from './pages/dashboard/dashboard.component';
+import { SidenavLayoutComponent } from './pages/sidenav-layout/sidenav-layout.component';
 
 const routes: Routes = [
   {
@@ -20,7 +20,7 @@ const routes: Routes = [
   },
   {
     path: 'dashboard/medico',
-    component: DashboardComponent
+    component: SidenavLayoutComponent
   }
 
 

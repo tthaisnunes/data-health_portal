@@ -1,0 +1,19 @@
+<p mwlCalendarToday [(viewDate)]="viewDate">10 de Janeiro, Quinta-feira</p>
+<div>
+  <button mat-icon-button color="accent" mwlCalendarPreviousView [view]="view" [(viewDate)]="viewDate"
+    (viewDateChange)="closeOpenMonthViewDay()">
+    <mat-icon>navigate_before</mat-icon>
+  </button>
+  <button mat-icon-button color="accent" mwlCalendarNextView [view]="view" [(viewDate)]="viewDate"
+    (viewDateChange)="closeOpenMonthViewDay()">
+    <mat-icon>navigate_next</mat-icon>
+  </button>
+</div>
+
+<div [ngSwitch]="view">
+  <mwl-calendar-month-view [viewDate]="viewDate" [events]="events" [refresh]="refresh"
+    [activeDayIsOpen]="activeDayIsOpen" (dayClicked)="dayClicked($event.day)">
+  </mwl-calendar-month-view>
+  <mwl-calendar-day-view [viewDate]="viewDate" [events]="events" [refresh]="refresh" [hourSegments]="1" [dayStartHour]="6" [dayEndHour]="18">
+  </mwl-calendar-day-view>
+</div>

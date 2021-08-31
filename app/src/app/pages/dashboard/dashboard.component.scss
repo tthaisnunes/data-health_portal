@@ -1,71 +1,40 @@
 .container {
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 33vh 33vh 33vh;
 }
 
-.logo {
-  display: block;
-  margin: -50px auto;
-}
-
-.mat-sidenav {
-  min-width: 300px;
-  -webkit-box-shadow: 10px 0px 15px 0px rgba(0, 0, 0, 0.04);
-  -moz-box-shadow: 10px 0px 15px 0px rgba(0, 0, 0, 0.04);
-  box-shadow: 10px 0px 15px 0px rgba(0, 0, 0, 0.04);
-
-  .mat-list-item {
-    border-bottom: solid 1px #dbdbdb;
-    font-size: 13px;
-
-    &:first-child {
-      border-top: solid 1px #dbdbdb;
-    }
-
-    &.active {
-      background: #ffefe4;
-
-      &:before {
-        content: "";
-        position: absolute;
-        height: 100%;
-        background: #fec096;
-        width: 10px;
-      }
-    }
-  }
-}
-
-.mat-drawer-content {
+.chart {
   background: #f0f0f0;
+  border:solid 1px #d6d6d6;
 }
 
-.content {
-  padding: 1rem;
+.chart-01 {
+  grid-column: 1/5;
+  grid-row: 1/1;
 }
 
-.is-mobile .toolbar {
-  position: fixed;
-  z-index: 2;
+.chart-02 {
+  grid-column: 5/9;
+  grid-row: 1/1;
 }
 
-h1.app-name {
-  margin-left: 8px;
+.chart-03 {
+  grid-column: 9/13;
+  grid-row: 1/5;
 }
 
-.sidenav-container {
-  flex: 1;
+.chart-04 {
+  grid-column: 1/5;
+  grid-row: 2/3;
 }
 
-.is-mobile .sidenav-container {
-  flex: 1 0 auto;
+.chart-05 {
+  grid-column: 5/9;
+  grid-row: 2/3;
 }
 
-.spacer {
-  flex: 1 1 auto;
+.chart-06 {
+  grid-column: 1/9;
+  grid-row: 3/5;
 }
