@@ -1,19 +1,32 @@
-<p mwlCalendarToday [(viewDate)]="viewDate">10 de Janeiro, Quinta-feira</p>
-<div>
-  <button mat-icon-button color="accent" mwlCalendarPreviousView [view]="view" [(viewDate)]="viewDate"
-    (viewDateChange)="closeOpenMonthViewDay()">
-    <mat-icon>navigate_before</mat-icon>
-  </button>
-  <button mat-icon-button color="accent" mwlCalendarNextView [view]="view" [(viewDate)]="viewDate"
-    (viewDateChange)="closeOpenMonthViewDay()">
-    <mat-icon>navigate_next</mat-icon>
-  </button>
-</div>
+<div class="content">
+  <div class="title">
+    <p mwlCalendarToday [(viewDate)]="viewDate">{{viewDate.getDate()}} de {{monthNames[viewDate.getMonth()]}} de
+      {{viewDate.getFullYear()}}</p>
+    <div>
+      <button mat-icon-button color="accent" mwlCalendarPreviousView [view]="view" [(viewDate)]="viewDate"
+        (viewDateChange)="closeOpenMonthViewDay()">
+        <mat-icon>navigate_before</mat-icon>
+      </button>
+      <button mat-icon-button color="accent" mwlCalendarNextView [view]="view" [(viewDate)]="viewDate"
+        (viewDateChange)="closeOpenMonthViewDay()">
+        <mat-icon>navigate_next</mat-icon>
+      </button>
+    </div>
+  </div>
 
-<div [ngSwitch]="view">
-  <mwl-calendar-month-view [viewDate]="viewDate" [events]="events" [refresh]="refresh"
-    [activeDayIsOpen]="activeDayIsOpen" (dayClicked)="dayClicked($event.day)">
-  </mwl-calendar-month-view>
-  <mwl-calendar-day-view [viewDate]="viewDate" [events]="events" [refresh]="refresh" [hourSegments]="1" [dayStartHour]="6" [dayEndHour]="18">
-  </mwl-calendar-day-view>
+  <div>
+    <mwl-calendar-month-view *ngIf="showMonth" [viewDate]="viewDate" [events]="events" [refresh]="refresh"
+      [locale]="locale" [activeDayIsOpen]="activeDayIsOpen" (dayClicked)="dayClicked($event.day)"
+      (eventClicked)="eventClicked($event)">
+    </mwl-calendar-month-view>
+
+    <mwl-calendar-week-view *ngIf="showWeek" [viewDate]="viewDate" [events]="events" [refresh]="refresh"
+      (eventClicked)="eventClicked($event)">
+    </mwl-calendar-week-view>
+
+    <mwl-calendar-day-view *ngIf="showDay" [viewDate]="viewDate" [events]="events" [refresh]="refresh"
+      [hourSegments]="hourSegments" [dayStartHour]="dayStartHour" [dayEndHour]="dayEndHour"
+      (eventClicked)="eventClicked($event)">
+    </mwl-calendar-day-view>
+  </div>
 </div>

@@ -2,7 +2,17 @@
   <div class="chart-01 chart"></div>
   <div class="chart-02 chart"></div>
   <div class="chart-03 chart">
-    <app-calendar></app-calendar>
+    <app-calendar
+      [view]="view"
+      [viewDate]="viewDate"
+      [activeDayIsOpen]="activeDayIsOpen"
+      [hourSegments]="hourSegments"
+      [dayStartHour]="dayStartHour"
+      [dayEndHour]="dayEndHour"
+      [showMonth]="true"
+      [showDay]="true"
+      [events]="events"
+    ></app-calendar>
   </div>
   <div class="chart-04 chart"></div>
   <div class="chart-05 chart"></div>

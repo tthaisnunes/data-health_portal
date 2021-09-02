@@ -4,6 +4,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AuthModule } from './components/auth/auth.module';
 import { SharedModule } from './components/shared/shared.module';
 
+import localePt from '@angular/common/locales/pt';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -13,12 +15,13 @@ import { adapterFactory } from 'angular-calendar/date-adapters/moment';
 import * as moment from 'moment';
 import { CalendarComponent } from './components/calendar/calendar.component';
 import { SidenavLayoutComponent } from './pages/sidenav-layout/sidenav-layout.component';
+import { registerLocaleData } from '@angular/common';
+
+registerLocaleData(localePt);
 
 export function momentAdapterFactory() {
   return adapterFactory(moment);
 };
-
-
 
 @NgModule({
   declarations: [
