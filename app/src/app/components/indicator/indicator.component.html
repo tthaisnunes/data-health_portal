@@ -1,0 +1,14 @@
+<div class="container {{indicator?.color}}">
+  <div class="header">
+    <mat-icon>{{indicator?.icon}}</mat-icon>
+    <span>
+      <mat-icon>
+        {{indicator?.status === 'down' ? "arrow_drop_down" : "arrow_drop_up"}}
+      </mat-icon>
+      <span>{{indicator?.history}}</span>
+    </span>
+  </div>
+
+  <p class="title">{{indicator?.value}}</p>
+  <p>{{indicator?.label}}</p>
+</div>

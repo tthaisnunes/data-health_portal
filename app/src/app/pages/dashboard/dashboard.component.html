@@ -1,20 +1,13 @@
 <div class="container">
-  <div class="chart-01 chart"></div>
-  <div class="chart-02 chart"></div>
-  <div class="chart-03 chart">
-    <app-calendar
-      [view]="view"
-      [viewDate]="viewDate"
-      [activeDayIsOpen]="activeDayIsOpen"
-      [hourSegments]="hourSegments"
-      [dayStartHour]="dayStartHour"
-      [dayEndHour]="dayEndHour"
-      [showMonth]="true"
-      [showDay]="true"
-      [events]="events"
-    ></app-calendar>
+  <div *ngFor="let item of indicators; index as i;" class="chart-0{{i + 1}} chart">
+    <app-indicator [indicator]=item></app-indicator>
   </div>
-  <div class="chart-04 chart"></div>
-  <div class="chart-05 chart"></div>
+  <div class="chart-05 chart">
+    <app-calendar [view]="view" [viewDate]="viewDate" [activeDayIsOpen]="activeDayIsOpen" [hourSegments]="hourSegments"
+      [dayStartHour]="dayStartHour" [dayEndHour]="dayEndHour" [showMonth]="true" [showDay]="true" [events]="events">
+    </app-calendar>
+  </div>
   <div class="chart-06 chart"></div>
+  <div class="chart-07 chart"></div>
+  <div class="chart-08 chart"></div>
 </div>

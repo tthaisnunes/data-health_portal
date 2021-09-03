@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { CalendarEvent, CalendarView } from 'angular-calendar';
 import { addDays, addHours, endOfMonth, startOfDay, subDays } from 'date-fns';
 import colors from '../../components/shared/colors';
+import Indicator from '../../components/indicator/indicator.model';
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
@@ -59,4 +60,38 @@ export class DashboardComponent {
       allDay: true,
     }
   ];
+
+  indicators: Indicator[] = [
+    {
+      label: "Consultas cancelas último mês",
+      value: 3,
+      color: "red",
+      status: "down",
+      icon: "report_gmailerrorred",
+      history: "-10%"
+    },
+    {
+      label: "Consultas realizadas último mês",
+      value: 52,
+      color: "blue",
+      status: "up",
+      icon: "perm_contact_calendar",
+      history: "+23%"
+    },
+    {
+      label: "Retornos realizados último mês",
+      value: 39,
+      color: "green",
+      status: "up",
+      icon: "history",
+      history: "+33%"
+    }, {
+      label: "Média atendimentos últimos 12 meses",
+      value: 45,
+      color: "yellow",
+      status: "down",
+      icon: "stacked_bar_chart",
+      history: "-13%"
+    }
+  ]
 }

@@ -16,6 +16,7 @@ import * as moment from 'moment';
 import { CalendarComponent } from './components/calendar/calendar.component';
 import { SidenavLayoutComponent } from './pages/sidenav-layout/sidenav-layout.component';
 import { registerLocaleData } from '@angular/common';
+import { IndicatorComponent } from './components/indicator/indicator.component';
 
 registerLocaleData(localePt);
 
@@ -28,7 +29,8 @@ export function momentAdapterFactory() {
     AppComponent,
     DashboardComponent,
     CalendarComponent,
-    SidenavLayoutComponent
+    SidenavLayoutComponent,
+    IndicatorComponent
   ],
   imports: [
     BrowserModule,

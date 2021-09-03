@@ -1,6 +1,6 @@
 <div class="container" [class.is-mobile]="mobileQuery.matches">
   <mat-sidenav-container class="sidenav-container">
-    <mat-sidenav #snav [mode]="mobileQuery.matches ? 'over' : 'side'" fixedTopGap="0" [opened]="true"
+    <mat-sidenav #snav [mode]="mobileQuery.matches ? 'over' : 'side'" fixedTopGap="0" [opened]="mobileQuery.matches ? 'false' : 'true'"
       [fixedInViewport]="true">
       <img src="../../../assets/images/logo.png" alt="logo" class="logo">
       <mat-nav-list>

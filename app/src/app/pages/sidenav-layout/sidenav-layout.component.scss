@@ -47,6 +47,10 @@
 
 .content {
   padding: 1rem;
+
+  @media (max-width: 724px) {
+    padding: 4.5rem 1rem 1rem;
+  }
 }
 
 .is-mobile .toolbar {
