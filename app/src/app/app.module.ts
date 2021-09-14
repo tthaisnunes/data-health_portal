@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { NgApexchartsModule } from 'ng-apexcharts';
 
 import { AuthModule } from './components/auth/auth.module';
 import { SharedModule } from './components/shared/shared.module';
@@ -17,6 +18,7 @@ import { CalendarComponent } from './components/calendar/calendar.component';
 import { SidenavLayoutComponent } from './pages/sidenav-layout/sidenav-layout.component';
 import { registerLocaleData } from '@angular/common';
 import { IndicatorComponent } from './components/indicator/indicator.component';
+import { ChartsComponent } from './components/chart/chart.component';
 
 registerLocaleData(localePt);
 
@@ -30,7 +32,8 @@ export function momentAdapterFactory() {
     DashboardComponent,
     CalendarComponent,
     SidenavLayoutComponent,
-    IndicatorComponent
+    IndicatorComponent,
+    ChartsComponent
   ],
   imports: [
     BrowserModule,
@@ -38,6 +41,7 @@ export function momentAdapterFactory() {
     AuthModule,
     BrowserAnimationsModule,
     SharedModule,
+    NgApexchartsModule,
     CalendarModule.forRoot({ provide: DateAdapter, useFactory: momentAdapterFactory })
   ],
   providers: [],
