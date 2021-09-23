@@ -73,3 +73,9 @@ h1.app-name {
 .spacer {
   flex: 1 1 auto;
 }
+
+::ng-deep {
+  .mat-menu-item {
+    font-family: "Open Sans", sans-serif;
+  }
+}
