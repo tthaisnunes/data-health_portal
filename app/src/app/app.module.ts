@@ -15,7 +15,6 @@ import { CalendarModule, DateAdapter } from 'angular-calendar';
 import { adapterFactory } from 'angular-calendar/date-adapters/moment';
 import * as moment from 'moment';
 import { CalendarComponent } from './components/calendar/calendar.component';
-import { SidenavLayoutComponent } from './components/sidenav-layout/sidenav-layout.component';
 import { registerLocaleData } from '@angular/common';
 import { IndicatorComponent } from './components/indicator/indicator.component';
 import { ChartsComponent } from './components/chart/chart.component';
@@ -31,7 +30,6 @@ export function momentAdapterFactory() {
     AppComponent,
     DashboardComponent,
     CalendarComponent,
-    SidenavLayoutComponent,
     IndicatorComponent,
     ChartsComponent
   ],

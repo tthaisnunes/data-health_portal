@@ -4,9 +4,9 @@
       [fixedInViewport]="true">
       <img src="../../../assets/images/logo.png" alt="logo" class="logo">
       <mat-nav-list>
-        <a mat-list-item routerLink="/dashboard" routerLinkActive="active">Dashboard</a>
-        <a mat-list-item routerLink="/agenda" routerLinkActive="active">Agenda</a>
-        <a mat-list-item routerLink="/pacientes" routerLinkActive="active">Pacientes</a>
+        <a mat-list-item routerLink="/doctor/dashboard" routerLinkActive="active">Dashboard</a>
+        <a mat-list-item routerLink="/doctor/calendar" routerLinkActive="active">Agenda</a>
+        <a mat-list-item routerLink="/doctor/pacient-history" routerLinkActive="active">Pacientes</a>
       </mat-nav-list>
     </mat-sidenav>
     <mat-sidenav-content>
@@ -26,7 +26,7 @@
         </mat-toolbar-row>
       </mat-toolbar>
       <div class="content">
-        <app-dashboard></app-dashboard>
+        <router-outlet></router-outlet>
       </div>
     </mat-sidenav-content>
   </mat-sidenav-container>
