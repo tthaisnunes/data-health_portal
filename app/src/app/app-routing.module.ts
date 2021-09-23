@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './components/auth/login/login.component';
 import { RegisterComponent } from './components/auth/register/register.component';
 import { ForgotPasswordComponent } from './components/auth/forgot-password/forgot-password.component';
-import { SidenavLayoutComponent } from './pages/sidenav-layout/sidenav-layout.component';
+import { MasterLayoutComponent } from './pages/doctor/master-layout/master-layout.component';
 
 const routes: Routes = [
   {
@@ -18,11 +18,18 @@ const routes: Routes = [
     path: 'auth/recuperar_senha',
     component: ForgotPasswordComponent
   },
+  // {
+  //   path: 'dashboard/medico',
+  //   component: SidenavLayoutComponent
+  // },
   {
-    path: 'dashboard/medico',
-    component: SidenavLayoutComponent
+    path: 'doctor',
+    component: MasterLayoutComponent,
+    loadChildren: () => import('./pages/doctor/doctor.module').then(m => m.DoctorModule),
+    data: {
+      breadcrumb: "Médicos"
+    }
   }
-
 
 ];
 

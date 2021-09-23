@@ -1,0 +1,75 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.logo {
+  display: block;
+  margin: -50px auto;
+}
+
+.mat-sidenav {
+  min-width: 300px;
+  -webkit-box-shadow: 10px 0px 15px 0px rgba(0, 0, 0, 0.04);
+  -moz-box-shadow: 10px 0px 15px 0px rgba(0, 0, 0, 0.04);
+  box-shadow: 10px 0px 15px 0px rgba(0, 0, 0, 0.04);
+
+  .mat-list-item {
+    border-bottom: solid 1px #dbdbdb;
+    font-size: 13px;
+
+    &:first-child {
+      border-top: solid 1px #dbdbdb;
+    }
+
+    &.active {
+      background: #ffefe4;
+
+      &:before {
+        content: "";
+        position: absolute;
+        height: 100%;
+        background: #fec096;
+        width: 10px;
+      }
+    }
+  }
+}
+
+.mat-drawer-content {
+  background: #f0f0f0;
+}
+
+.content {
+  padding: 1rem;
+
+  @media (max-width: 724px) {
+    padding: 4.5rem 1rem 1rem;
+  }
+}
+
+.is-mobile .toolbar {
+  position: fixed;
+  z-index: 2;
+}
+
+h1.app-name {
+  margin-left: 8px;
+}
+
+.sidenav-container {
+  flex: 1;
+}
+
+.is-mobile .sidenav-container {
+  flex: 1 0 auto;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}

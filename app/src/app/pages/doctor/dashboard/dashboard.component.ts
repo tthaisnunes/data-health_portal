@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { CalendarEvent, CalendarView } from 'angular-calendar';
 import { addDays, addHours, endOfMonth, startOfDay, subDays } from 'date-fns';
-import colors from '../../components/shared/colors';
-import Indicator from '../../components/indicator/indicator.model';
+import colors from '../../../components/shared/colors';
+import Indicator from '../../../components/indicator/indicator.model';
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
