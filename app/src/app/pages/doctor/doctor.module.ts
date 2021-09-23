@@ -5,12 +5,14 @@ import { MasterLayoutComponent } from '../../components/master-layout/master-lay
 import { SharedModule } from '../../components/shared/shared.module';
 import { CalendarComponent } from './calendar/calendar.component';
 import { PacientHistoryComponent } from './pacient-history/pacient-history.component';
+import { PacientDetailsComponent } from './pacient-details/pacient-details.component';
 
 @NgModule({
   declarations: [
     MasterLayoutComponent,
     CalendarComponent,
-    PacientHistoryComponent
+    PacientHistoryComponent,
+    PacientDetailsComponent
   ],
   imports: [
     CommonModule,
