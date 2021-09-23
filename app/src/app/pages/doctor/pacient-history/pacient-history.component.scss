@@ -1,0 +1,37 @@
+table {
+  width: 100%;
+}
+
+.mat-form-field {
+  font-size: 14px;
+  width: 100%;
+}
+
+.center {
+  text-align: center;
+
+  ::ng-deep .mat-sort-header-container {
+    justify-content: center;
+  }
+}
+
+.status-label {
+  padding: 2px 10px;
+  border-radius: 4px;
+  display: inline-block;
+
+  &.green {
+    background-color: rgb(190, 227, 219);
+    border: solid 1px rgb(137, 176, 174);
+  }
+
+  &.blue {
+    background-color: rgb(167, 173, 192);
+    border: solid 1px rgb(85, 91, 110);
+  }
+
+  &.grey {
+    background-color: #eaecf1;
+    border: solid 1px #c4c8d5;
+  }
+}
