@@ -1,0 +1,128 @@
+<div class="content-info">
+  <form class="form">
+    <p>Informações Pessoais</p>
+    <div>
+      <mat-form-field class="full-width" appearance="fill">
+        <mat-label>Nome Completo</mat-label>
+        <input matInput placeholder="Nome" type="text" autocomplete="off">
+      </mat-form-field>
+    </div>
+
+    <div>
+      <mat-form-field class="full-width" appearance="fill">
+        <mat-label>Idade</mat-label>
+        <input matInput placeholder="Idade" type="number" autocomplete="off">
+      </mat-form-field>
+    </div>
+
+    <div>
+      <mat-form-field class="full-width" appearance="fill">
+        <mat-label>Altura</mat-label>
+        <input matInput placeholder="Altura" type="number" autocomplete="off">
+      </mat-form-field>
+    </div>
+
+    <div>
+      <mat-form-field class="full-width" appearance="fill">
+        <mat-label>Peso</mat-label>
+        <input matInput placeholder="Peso" type="number" autocomplete="off">
+      </mat-form-field>
+    </div>
+
+    <p>Informações de Contato</p>
+    <div>
+      <mat-form-field class="full-width" appearance="fill">
+        <mat-label>E-mail</mat-label>
+        <input matInput placeholder="E-mail" type="mail" autocomplete="off">
+      </mat-form-field>
+    </div>
+
+    <div>
+      <mat-form-field class="full-width" appearance="fill">
+        <mat-label>Telefone</mat-label>
+        <input matInput placeholder="Telefone" type="tel" autocomplete="off">
+      </mat-form-field>
+    </div>
+
+    <div>
+      <mat-form-field class="full-width" appearance="fill">
+        <mat-label>Celular</mat-label>
+        <input matInput placeholder="Telefone" type="tel" autocomplete="off">
+      </mat-form-field>
+    </div>
+
+    <p>Endereço</p>
+    <div>
+      <mat-form-field class="full-width" appearance="fill">
+        <mat-label>Cep</mat-label>
+        <input matInput placeholder="Cep" type="number" autocomplete="off">
+      </mat-form-field>
+    </div>
+
+    <div>
+      <mat-form-field class="full-width" appearance="fill">
+        <mat-label>Rua</mat-label>
+        <input matInput placeholder="Rua" type="text" autocomplete="off">
+      </mat-form-field>
+    </div>
+
+    <div>
+      <mat-form-field class="full-width" appearance="fill">
+        <mat-label>Número</mat-label>
+        <input matInput placeholder="Número" type="number" autocomplete="off">
+      </mat-form-field>
+    </div>
+
+    <div>
+      <mat-form-field class="full-width" appearance="fill">
+        <mat-label>Complemento</mat-label>
+        <input matInput placeholder="Complemento" type="text" autocomplete="off">
+      </mat-form-field>
+    </div>
+
+    <div>
+      <mat-form-field class="full-width" appearance="fill">
+        <mat-label>Bairro</mat-label>
+        <input matInput placeholder="Bairro" type="text" autocomplete="off">
+      </mat-form-field>
+    </div>
+
+    <div>
+      <mat-form-field class="full-width" appearance="fill">
+        <mat-label>Estado</mat-label>
+        <input type="text" placeholder="Estado" matInput [formControl]="stateControl" [matAutocomplete]="auto"
+          autocomplete="off">
+        <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+          <mat-option *ngFor="let option of filteredStates | async" [value]="option">
+            {{option}}
+          </mat-option>
+        </mat-autocomplete>
+      </mat-form-field>
+    </div>
+
+    <div>
+      <mat-form-field class="full-width" appearance="fill">
+        <mat-label>Cidade</mat-label>
+        <input type="text" placeholder="Cidade" matInput [formControl]="cityControl" [matAutocomplete]="autoCity"
+          autocomplete="off">
+        <mat-autocomplete autoActiveFirstOption #autoCity="matAutocomplete">
+          <mat-option *ngFor="let option of filteredCities | async" [value]="option">
+            {{option}}
+          </mat-option>
+        </mat-autocomplete>
+      </mat-form-field>
+    </div>
+
+    <p>Observações Gerais</p>
+    <div>
+      <mat-form-field appearance="fill" class="full-width">
+        <mat-label>Textarea</mat-label>
+        <textarea matInput></textarea>
+      </mat-form-field>
+    </div>
+
+    <div class="button">
+      <button mat-flat-button color="accent">Salvar</button>
+    </div>
+  </form>
+</div>

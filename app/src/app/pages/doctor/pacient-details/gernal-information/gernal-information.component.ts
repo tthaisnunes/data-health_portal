@@ -4,19 +4,18 @@ import { Observable } from 'rxjs';
 import {map, startWith} from 'rxjs/operators';
 
 @Component({
-  selector: 'app-pacient-details',
-  templateUrl: './pacient-details.component.html',
-  styleUrls: ['./pacient-details.component.scss']
+  selector: 'app-gernal-information',
+  templateUrl: './gernal-information.component.html',
+  styleUrls: ['./gernal-information.component.scss']
 })
-export class PacientDetailsComponent implements OnInit {
+export class GernalInformationComponent implements OnInit {
   stateControl = new FormControl();
   states: string[] = ['Two', 'Two', 'Three'];
   filteredStates: Observable<string[]>;
   cityControl = new FormControl();
   cities: string[] = ['One', 'Two', 'Three'];
   filteredCities: Observable<string[]>;
-
-
+ 
   constructor() { }
 
   ngOnInit(): void {
@@ -42,5 +41,4 @@ export class PacientDetailsComponent implements OnInit {
 
     return this.cities.filter(cities => cities.toLowerCase().includes(filterValue));
   }
-
 }
