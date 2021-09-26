@@ -15,6 +15,7 @@ import { MedicalPrescriptionsComponent } from './pacient-details/medical-prescri
 import { SharedExamsComponent } from './pacient-details/shared-exams/shared-exams.component';
 import { ManagementModalComponent } from './pacient-details/medical-record/management-modal/management-modal.component';
 import { ManagementModalExamsComponent } from './pacient-details/exams/management-modal/management-modal.component';
+import { ManagementModalPrescriptionComponent } from './pacient-details/medical-prescriptions/management-modal-prescription/management-modal-prescription.component';
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import { ManagementModalExamsComponent } from './pacient-details/exams/managemen
     MedicalPrescriptionsComponent,
     SharedExamsComponent,
     ManagementModalComponent,
-    ManagementModalExamsComponent
+    ManagementModalExamsComponent,
+    ManagementModalPrescriptionComponent
   ],
   imports: [
     CommonModule,
