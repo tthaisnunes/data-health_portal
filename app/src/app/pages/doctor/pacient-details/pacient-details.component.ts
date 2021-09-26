@@ -10,7 +10,7 @@ import {map, startWith} from 'rxjs/operators';
 })
 export class PacientDetailsComponent implements OnInit {
   stateControl = new FormControl();
-  states: string[] = ['Two', 'Two', 'Three'];
+  states: string[] = ['SP', 'ES', 'RG'];
   filteredStates: Observable<string[]>;
   cityControl = new FormControl();
   cities: string[] = ['One', 'Two', 'Three'];

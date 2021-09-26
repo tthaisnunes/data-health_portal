@@ -1,0 +1,25 @@
+.content-modal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.form {
+  min-width: 300px;
+  width: 100%;
+}
+
+.full-width {
+  width: 100%;
+}
+
+h2 {
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+}
+
+.button-container {
+  display: flex;
+  justify-content: flex-end;
+}
+

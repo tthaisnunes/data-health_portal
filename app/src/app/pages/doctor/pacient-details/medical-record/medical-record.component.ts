@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { MatTableDataSource } from '@angular/material/table';
 import { ManagementModalComponent } from './management-modal/management-modal.component';
-import { DeleteConfirmationModalComponent } from './delete-confirmation-modal/delete-confirmation-modal.component';
 export interface MedicalRecords {
   id: number;
   date: Date;
