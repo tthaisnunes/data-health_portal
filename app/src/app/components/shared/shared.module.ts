@@ -1,4 +1,7 @@
 import { NgModule } from '@angular/core';
+import { registerLocaleData } from '@angular/common';
+import localePt from '@angular/common/locales/pt';
+
 import { CommonModule } from '@angular/common';
 
 import { CdkStepperModule } from '@angular/cdk/stepper';
@@ -34,6 +37,9 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatTreeModule } from '@angular/material/tree';
 import { DomSanitizer } from '@angular/platform-browser';
+import { MAT_DATE_LOCALE } from '@angular/material/core';
+
+registerLocaleData(localePt, 'pt');
 
 @NgModule({
   declarations: [],
@@ -109,6 +115,9 @@ import { DomSanitizer } from '@angular/platform-browser';
     MatTooltipModule,
     MatTreeModule,
     CdkStepperModule
+  ],
+  providers: [
+    { provide: MAT_DATE_LOCALE, useValue: 'pt-BR' },
   ]
 })
 export class SharedModule { }

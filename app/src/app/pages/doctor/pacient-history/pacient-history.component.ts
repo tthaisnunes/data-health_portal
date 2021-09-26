@@ -27,6 +27,7 @@ export class PacientHistoryComponent implements OnInit{
   @ViewChild(MatSort) sort: MatSort;
 
   ngOnInit(){
+    
     this.userList = [
       {
         id: 1,

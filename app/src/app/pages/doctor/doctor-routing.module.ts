@@ -20,7 +20,7 @@ const routes: Routes = [
     component: PacientHistoryComponent
   },
   {
-    path: 'pacient-details/:id',
+    path: 'pacient-history/pacient-details/:id',
     component: PacientDetailsComponent
   },
 ];
