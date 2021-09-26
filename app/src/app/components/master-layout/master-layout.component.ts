@@ -59,6 +59,7 @@ export class MasterLayoutComponent implements OnInit {
 
   href: string;
   profileType: string;
+  profileName: string;
 
   mobileQuery: MediaQueryList;
 
@@ -84,6 +85,7 @@ export class MasterLayoutComponent implements OnInit {
     
     if(this.href.includes('doctor')) {
       this.profileType = 'doctor';
+      this.profileName = 'Médico';
     } else if(this.href.includes('medical-clinic')) {
       this.profileType = 'medical-clinic';
     }else if(this.href.includes('pacient')) {

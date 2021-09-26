@@ -23,7 +23,7 @@ const routes: Routes = [
     component: MasterLayoutComponent,
     loadChildren: () => import('./pages/doctor/doctor.module').then(m => m.DoctorModule),
     data: {
-      breadcrumb: "Médicos"
+      breadcrumb: "Médico"
     }
   },
   {
