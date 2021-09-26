@@ -18,9 +18,10 @@
   {
     "id": 3, 
     "date": "9/24/21", 
-    "description": "Raio X", 
+    "description": "Histopatológico", 
     "status": "Compartilhado",
     "statusColor": "green",
+    "imageUrl": "../../../../../../assets/images/exams/histopatologico-01.png", 
     "userId": 7
   },
   {
@@ -45,6 +46,7 @@
     "description": "Hemograma plaquetas total", 
     "status": "Compartilhado",
     "statusColor": "green",
+    "imageUrl": "../../../../../../assets/images/exams/hemograma-01.png", 
     "userId": 8
   },
     {
@@ -68,6 +70,7 @@
     "date": "9/24/21", 
     "description": "Ultrassom abdomem total", 
     "status": "Compartilhado",
+    "imageUrl": "../../../../../../assets/images/exams/ultrassom-01.jpg", 
     "statusColor": "green",
     "userId": 21
   },
