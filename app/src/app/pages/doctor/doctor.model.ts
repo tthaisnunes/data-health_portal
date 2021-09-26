@@ -31,8 +31,10 @@ export interface Exams {
   id: number;
   date: Date;
   description: string;
-  data: string;
   userId: number;
+  status: string;
+  statusColor: string;
+  imageUrl?: string;
 }
 export interface MedicalPrescriptions {
   id: number;
