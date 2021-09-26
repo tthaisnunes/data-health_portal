@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { filter, map, toArray } from 'rxjs/operators';
 
 import * as Model from './doctor.model';
 
@@ -15,5 +16,11 @@ export class DoctorService {
 
   getUsersList(): Observable<Model.PacientData[]> {
     return this.httpClient.get<Model.PacientData[]>('data/user.json');
+  }
+
+  getUser(id: number): Observable<Model.PacientData[]> {
+    return this.httpClient.get<Model.PacientData[]>('data/user.json').pipe(
+      map(item => item.filter(item => item.id === id)),
+    );
   }
 }

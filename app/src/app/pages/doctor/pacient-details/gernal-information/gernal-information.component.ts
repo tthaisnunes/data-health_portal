@@ -1,7 +1,11 @@
-import { Component, OnInit } from '@angular/core';
-import { FormControl } from '@angular/forms';
+import { Component, Input, OnInit } from '@angular/core';
+import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { Observable } from 'rxjs';
-import {map, startWith} from 'rxjs/operators';
+import { map, startWith } from 'rxjs/operators';
+
+import { PacientData } from '../../doctor.model';
+import { DoctorService } from '../../doctor.service';
 
 @Component({
   selector: 'app-gernal-information',
@@ -9,36 +13,64 @@ import {map, startWith} from 'rxjs/operators';
   styleUrls: ['./gernal-information.component.scss']
 })
 export class GernalInformationComponent implements OnInit {
-  stateControl = new FormControl();
-  states: string[] = ['Two', 'Two', 'Three'];
-  filteredStates: Observable<string[]>;
-  cityControl = new FormControl();
-  cities: string[] = ['One', 'Two', 'Three'];
-  filteredCities: Observable<string[]>;
- 
-  constructor() { }
+  @Input() userId: number;
+  pacientData: PacientData;
+  pacientForm = this.fb.group({
+    name: [''],
+    age: [''],
+    height: [''],
+    weight: [''],
+    mail: [''],
+    phone: [''],
+    cellPhone: [''],
+    zipCode: [''],
+    street: [''],
+    streetNumber: [''],
+    complement: [''],
+    neighborhood: [''],
+    state: [''],
+    city: [''],
+    notes: ['']
+  });
+
+  constructor(
+    private service: DoctorService,
+    private fb: FormBuilder,
+    private _snackBar: MatSnackBar
+  ) { }
 
   ngOnInit(): void {
-    this.filteredStates = this.stateControl.valueChanges.pipe(
-      startWith(''),
-      map(value => this._filterStates(value))
-    );
-
-    this.filteredCities = this.cityControl.valueChanges.pipe(
-      startWith(''),
-      map(value => this._filterCities(value))
-    );
+    this.service.getUser(this.userId).subscribe(res => {
+      this.pacientData = res[0];
+      this.buildForm(this.pacientData);
+    });
   }
 
-  _filterStates(value: string): string[] {
-    const filterValue = value.toLowerCase();
-
-    return this.states.filter(states => states.toLowerCase().includes(filterValue));
+  buildForm(pacientData: PacientData) {
+    this.pacientForm = this.fb.group({
+      name: [pacientData.name],
+      age: [pacientData.age],
+      height: [pacientData.height],
+      weight: [pacientData.weight],
+      mail: [pacientData.email],
+      phone: [pacientData.phone],
+      cellPhone: [pacientData.cellPhone],
+      zipCode: [pacientData.zipCode],
+      street: [pacientData.street],
+      streetNumber: [pacientData.streetNumber],
+      complement: [pacientData.complement],
+      neighborhood: [pacientData.neighborhood],
+      state: [pacientData.state],
+      city: [pacientData.city],
+      notes: [pacientData.notes],
+    });
   }
 
-  _filterCities(value: string): string[] {
-    const filterValue = value.toLowerCase();
-
-    return this.cities.filter(cities => cities.toLowerCase().includes(filterValue));
+  onSave(){
+    this._snackBar.open('Alterações salvas com sucesso', '', {
+      duration: 2000,
+      panelClass: 'white'
+    });
   }
+
 }
