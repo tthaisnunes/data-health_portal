@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { MatTableDataSource } from '@angular/material/table';
 import { ManagementModalPrescriptionComponent } from './management-modal-prescription/management-modal-prescription.component';
@@ -19,6 +19,8 @@ const ELEMENT_DATA: MedicalRecords[] = [
 })
 
 export class MedicalPrescriptionsComponent {
+  @Input() userId: number;
+
   constructor(public dialog: MatDialog) { }
 
   displayedColumns: string[] = ['id', 'date', 'description', 'actions'];

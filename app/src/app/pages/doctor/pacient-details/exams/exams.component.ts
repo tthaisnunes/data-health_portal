@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { MatTableDataSource } from '@angular/material/table';
 
@@ -23,6 +23,8 @@ const ELEMENT_DATA: MedicalRecords[] = [
   styleUrls: ['./exams.component.scss']
 })
 export class ExamsComponent {
+  @Input() userId: number;
+
   constructor(public dialog: MatDialog) { }
 
   displayedColumns: string[] = ['id', 'date', 'description', 'status'];

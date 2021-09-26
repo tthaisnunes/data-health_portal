@@ -19,3 +19,11 @@ export interface PacientData {
   city: string;
   notes: string;
 }
+
+export interface MedicalRecords {
+  id: number;
+  date: Date;
+  description: string;
+  data: string;
+  userId: number;
+}

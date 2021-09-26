@@ -1,42 +1,54 @@
-import { Component } from '@angular/core';
+import { Component, Input, OnInit, ViewChild } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { MatTableDataSource } from '@angular/material/table';
 import { ManagementModalComponent } from './management-modal/management-modal.component';
-export interface MedicalRecords {
-  id: number;
-  date: Date;
-  description: string;
-}
 
-const ELEMENT_DATA: MedicalRecords[] = [
-  { id: 1, date: new Date(), description: 'bla bla' },
-  { id: 2, date: new Date(), description: 'bla bla' },
-];
+import { MedicalRecords } from '../../doctor.model';
+import { DoctorService } from '../../doctor.service';
+import { MatPaginator } from '@angular/material/paginator';
+import { MatSort } from '@angular/material/sort';
+
 @Component({
   selector: 'app-medical-record',
   templateUrl: './medical-record.component.html',
   styleUrls: ['./medical-record.component.scss']
 })
 
-export class MedicalRecordComponent {
-  constructor(public dialog: MatDialog) { }
-
+export class MedicalRecordComponent implements OnInit {
+  @Input() userId: number;
+  medicalRecordsList: MedicalRecords[];
   displayedColumns: string[] = ['id', 'date', 'description', 'actions'];
-  dataSource = new MatTableDataSource(ELEMENT_DATA);
+  dataSource: MatTableDataSource<MedicalRecords>;
+
+  @ViewChild(MatPaginator) paginator: MatPaginator;
+  @ViewChild(MatSort) sort: MatSort;
+
+  constructor(
+    public dialog: MatDialog,
+    public service: DoctorService
+  ) { }
+
+  ngOnInit(){
+    this.service.getMedicalRecords(this.userId).subscribe(res => {
+      this.medicalRecordsList = res;
+      this.dataSource = new MatTableDataSource(this.medicalRecordsList);
+
+      this.dataSource.paginator = this.paginator;
+      this.dataSource.sort = this.sort;
+    });
+  }
 
   applyFilter(event: Event) {
     const filterValue = (event.target as HTMLInputElement).value;
     this.dataSource.filter = filterValue.trim().toLowerCase();
   }
 
-  openDialogManagement() {
-    const dialogRef = this.dialog.open(ManagementModalComponent, {
+  openDialogManagement(item?: MedicalRecords) {
+    this.dialog.open(ManagementModalComponent, {
       width: '1080px',
-      data: {}
-    });
-
-    dialogRef.afterClosed().subscribe(result => {
-      console.log(`Dialog result: ${result}`);
+      data: {
+        ...item
+      }
     });
   }
 }

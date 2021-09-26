@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { MatTableDataSource } from '@angular/material/table';
 import { ViewExamModalComponent } from './view-exam-modal/view-exam-modal.component';
@@ -19,6 +19,8 @@ const ELEMENT_DATA: MedicalRecords[] = [
   styleUrls: ['./shared-exams.component.scss']
 })
 export class SharedExamsComponent {
+  @Input() userId: number;
+
   constructor(public dialog: MatDialog) { }
 
   displayedColumns: string[] = ['id', 'requestDate', 'datePerfomeded', 'imageUrl'];

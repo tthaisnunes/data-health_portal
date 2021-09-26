@@ -23,4 +23,10 @@ export class DoctorService {
       map(item => item.filter(item => item.id === id)),
     );
   }
+
+  getMedicalRecords(userId: Number): Observable<Model.MedicalRecords[]> {
+    return this.httpClient.get<Model.MedicalRecords[]>('data/medical-record.json').pipe(
+      map(item => item.filter(item => item.userId === userId)),
+    );
+  }
 }
