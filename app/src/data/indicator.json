@@ -1,6 +1,6 @@
 [
   {
-    "label": "Consultas cancelas último mês",
+    "label": "Consultas canceladas último mês",
     "value": 3,
     "color": "red",
     "status": "down",
