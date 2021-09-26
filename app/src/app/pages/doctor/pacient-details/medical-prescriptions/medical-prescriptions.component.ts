@@ -1,17 +1,13 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, ViewChild } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { MatTableDataSource } from '@angular/material/table';
 import { ManagementModalPrescriptionComponent } from './management-modal-prescription/management-modal-prescription.component';
-export interface MedicalRecords {
-  id: number;
-  date: Date;
-  description: string;
-}
 
-const ELEMENT_DATA: MedicalRecords[] = [
-  { id: 1, date: new Date(), description: 'bla bla' },
-  { id: 2, date: new Date(), description: 'bla bla' },
-];
+import { MedicalPrescriptions } from '../../doctor.model';
+import { DoctorService } from '../../doctor.service';
+import { MatPaginator } from '@angular/material/paginator';
+import { MatSort } from '@angular/material/sort';
+
 @Component({
   selector: 'app-medical-prescriptions',
   templateUrl: './medical-prescriptions.component.html',
@@ -20,25 +16,39 @@ const ELEMENT_DATA: MedicalRecords[] = [
 
 export class MedicalPrescriptionsComponent {
   @Input() userId: number;
-
-  constructor(public dialog: MatDialog) { }
-
+  medicalPrescriptionsList: MedicalPrescriptions[];
   displayedColumns: string[] = ['id', 'date', 'description', 'actions'];
-  dataSource = new MatTableDataSource(ELEMENT_DATA);
+  dataSource: MatTableDataSource<MedicalPrescriptions>;
+
+  @ViewChild(MatPaginator) paginator: MatPaginator;
+  @ViewChild(MatSort) sort: MatSort;
+
+  constructor(
+    public dialog: MatDialog,
+    public service: DoctorService
+  ) { }
+
+  ngOnInit() {
+    this.service.getMedicalRecords(this.userId).subscribe(res => {
+      this.medicalPrescriptionsList = res;
+      this.dataSource = new MatTableDataSource(this.medicalPrescriptionsList);
+
+      this.dataSource.paginator = this.paginator;
+      this.dataSource.sort = this.sort;
+    });
+  }
 
   applyFilter(event: Event) {
     const filterValue = (event.target as HTMLInputElement).value;
     this.dataSource.filter = filterValue.trim().toLowerCase();
   }
 
-  openDialogManagement() {
+  openDialogManagement(item?: MedicalPrescriptions) {
     const dialogRef = this.dialog.open(ManagementModalPrescriptionComponent, {
       width: '1080px',
-      data: {}
-    });
-
-    dialogRef.afterClosed().subscribe(result => {
-      console.log(`Dialog result: ${result}`);
+      data: {
+        ...item
+      }
     });
   }
 }

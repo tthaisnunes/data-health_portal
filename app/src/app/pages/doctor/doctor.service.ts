@@ -35,4 +35,10 @@ export class DoctorService {
       map(item => item.filter(item => item.userId === userId)),
     );
   }
+
+  getMedicalPrescriptions(userId: Number): Observable<Model.MedicalPrescriptions[]> {
+    return this.httpClient.get<Model.MedicalPrescriptions[]>('data/medical-prescriptions.json').pipe(
+      map(item => item.filter(item => item.userId === userId)),
+    );
+  }
 }

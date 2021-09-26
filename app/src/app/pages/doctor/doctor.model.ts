@@ -34,3 +34,10 @@ export interface Exams {
   data: string;
   userId: number;
 }
+export interface MedicalPrescriptions {
+  id: number;
+  date: Date;
+  description: string;
+  data: string;
+  userId: number;
+}
