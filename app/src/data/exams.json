@@ -1,7 +1,7 @@
 [
   {
     "id": 1, 
-    "date": "24/9/21", 
+    "date": "9/24/21", 
     "description": "Hemograma plaquetas total", 
     "status": "Solicitado",
     "statusColor": "grey",
@@ -9,7 +9,7 @@
   },
   {
     "id": 2, 
-    "date": "24/9/21", 
+    "date": "9/24/21", 
     "description": "Ultrassom abdomem total", 
     "status": "Solicitado",
     "statusColor": "grey",
@@ -17,7 +17,7 @@
   },
   {
     "id": 3, 
-    "date": "24/9/21", 
+    "date": "9/24/21", 
     "description": "Raio X", 
     "status": "Compartilhado",
     "statusColor": "green",
@@ -25,7 +25,7 @@
   },
   {
     "id": 4, 
-    "date": "6/9/21", 
+    "date": "9/6/21", 
     "description": "Hemograma plaquetas total", 
     "status": "Solicitado",
     "statusColor": "grey",
@@ -33,7 +33,7 @@
   },
   {
     "id": 5, 
-    "date": "6/9/21", 
+    "date": "9/6/21", 
     "description": "Ultrassom abdomem total", 
     "status": "Solicitado",
     "statusColor": "grey",
@@ -41,7 +41,7 @@
   },
   {
     "id": 6, 
-    "date": "10/9/21", 
+    "date": "9/10/21", 
     "description": "Hemograma plaquetas total", 
     "status": "Compartilhado",
     "statusColor": "green",
@@ -49,7 +49,7 @@
   },
     {
     "id": 7, 
-    "date": "22/9/21", 
+    "date": "9/22/21", 
     "description": "Raio X", 
     "status": "Solicitado",
     "statusColor": "grey",
@@ -57,7 +57,7 @@
   },
   {
     "id": 8, 
-    "date": "24/9/21", 
+    "date": "9/24/21", 
     "status": "Solicitado",
     "description": "Hemograma plaquetas total", 
     "statusColor": "grey",
@@ -65,7 +65,7 @@
   },
   {
     "id": 9, 
-    "date": "24/9/21", 
+    "date": "9/24/21", 
     "description": "Ultrassom abdomem total", 
     "status": "Compartilhado",
     "statusColor": "green",
@@ -73,7 +73,7 @@
   },
   {
     "id": 10, 
-    "date": "20/9/21", 
+    "date": "9/20/21", 
     "description": "Hemograma plaquetas total", 
     "status": "Solicitado",
     "statusColor": "grey",
@@ -81,7 +81,7 @@
   },
   {
     "id": 11, 
-    "date": "20/9/21", 
+    "date": "9/20/21", 
     "description": "Ultrassom abdomem total", 
     "status": "Solicitado",
     "statusColor": "grey",
@@ -89,7 +89,7 @@
   },
   {
     "id": 12, 
-    "date": "20/9/21", 
+    "date": "9/20/21", 
     "description": "Raio X", 
     "status": "Solicitado",
     "statusColor": "grey",
