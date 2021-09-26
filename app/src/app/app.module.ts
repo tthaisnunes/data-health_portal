@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { registerLocaleData } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgApexchartsModule } from 'ng-apexcharts';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AuthModule } from './components/auth/auth.module';
 import { SharedModule } from './components/shared/shared.module';
@@ -38,6 +39,7 @@ export function momentAdapterFactory() {
     BrowserModule,
     AppRoutingModule,
     AuthModule,
+    HttpClientModule,
     BrowserAnimationsModule,
     SharedModule,
     NgApexchartsModule,
