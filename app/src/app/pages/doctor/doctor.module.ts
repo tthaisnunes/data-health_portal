@@ -5,7 +5,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DoctorRoutingModule } from '../doctor/doctor-routing.module';
 import { MasterLayoutComponent } from '../../components/master-layout/master-layout.component';
 import { SharedModule } from '../../components/shared/shared.module';
-import { CalendarComponent } from './calendar/calendar.component';
 import { PacientHistoryComponent } from './pacient-history/pacient-history.component';
 import { PacientDetailsComponent } from './pacient-details/pacient-details.component';
 import { GernalInformationComponent } from './pacient-details/gernal-information/gernal-information.component';
@@ -22,7 +21,6 @@ import { ViewExamModalComponent } from './pacient-details/shared-exams/view-exam
 @NgModule({
   declarations: [
     MasterLayoutComponent,
-    CalendarComponent,
     PacientHistoryComponent,
     PacientDetailsComponent,
     GernalInformationComponent,

@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { CalendarComponent } from './calendar/calendar.component';
+import { CalendarDoctorComponent } from './calendar/calendar.component';
 import { PacientHistoryComponent } from './pacient-history/pacient-history.component';
 import { PacientDetailsComponent } from './pacient-details/pacient-details.component';
 
@@ -13,7 +13,7 @@ const routes: Routes = [
   },
   {
     path: 'calendar',
-    component: CalendarComponent
+    component: CalendarDoctorComponent
   },
   {
     path: 'pacient-history',
