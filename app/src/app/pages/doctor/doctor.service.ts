@@ -29,4 +29,10 @@ export class DoctorService {
       map(item => item.filter(item => item.userId === userId)),
     );
   }
+
+  getExams(userId: Number): Observable<Model.Exams[]> {
+    return this.httpClient.get<Model.Exams[]>('data/exams.json').pipe(
+      map(item => item.filter(item => item.userId === userId)),
+    );
+  }
 }

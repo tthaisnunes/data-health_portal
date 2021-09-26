@@ -2,6 +2,11 @@
   <h2>Prontuário</h2>
 
   <form class="form">
+    <mat-form-field class="full-width" appearance="fill" *ngIf="!data.id">
+      <mat-label>Descrição</mat-label>
+      <input matInput placeholder="Descrição" type="text" autocomplete="off">
+    </mat-form-field>
+
     <mat-form-field class="full-width" appearance="fill">
       <mat-label>Descrição geral:</mat-label>
       <textarea matInput placeholder="Descrição completa do paciente" name="data" [(ngModel)]="data.data"></textarea>

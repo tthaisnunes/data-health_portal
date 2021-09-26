@@ -27,3 +27,10 @@ export interface MedicalRecords {
   data: string;
   userId: number;
 }
+export interface Exams {
+  id: number;
+  date: Date;
+  description: string;
+  data: string;
+  userId: number;
+}
