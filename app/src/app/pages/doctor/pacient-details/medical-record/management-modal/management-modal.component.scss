@@ -1,0 +1,30 @@
+.content-modal {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.form {
+  min-width: 150px;
+  width: 100%;
+
+  textarea {
+    min-height: 50vh;
+  }
+}
+
+.full-width {
+  width: 100%;
+}
+
+h2 {
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+}
+
+.button-container {
+  display: flex;
+  justify-content: flex-end;
+}
+
