@@ -29,6 +29,7 @@
     "fusioncharts": "^3.17.0",
     "moment": "^2.29.1",
     "ng-apexcharts": "^1.5.12",
+    "ngx-mask": "^12.0.0",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
     "zone.js": "~0.11.3"

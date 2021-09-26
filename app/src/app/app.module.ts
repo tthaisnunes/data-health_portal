@@ -20,6 +20,7 @@ import { CalendarComponent } from './components/calendar/calendar.component';
 import { IndicatorComponent } from './components/indicator/indicator.component';
 import { ChartsComponent } from './components/chart/chart.component';
 import { MAT_DATE_LOCALE } from '@angular/material/core';
+import { NgxMaskModule, IConfig } from 'ngx-mask'
 
 registerLocaleData(localePt, 'pt');
 
@@ -43,6 +44,7 @@ export function momentAdapterFactory() {
     BrowserAnimationsModule,
     SharedModule,
     NgApexchartsModule,
+    NgxMaskModule.forRoot(),
     CalendarModule.forRoot({ provide: DateAdapter, useFactory: momentAdapterFactory })
   ],
   providers: [{provide: MAT_DATE_LOCALE, useValue: 'pt-BR'},],
