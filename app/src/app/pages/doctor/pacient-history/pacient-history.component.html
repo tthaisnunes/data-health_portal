@@ -39,9 +39,9 @@
     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
 
     <tr class="mat-row" *matNoDataRow>
-      <td class="mat-cell" colspan="5">Nenhum paciente encontrato "{{input.value}}"</td>
+      <td class="mat-cell" colspan="5">Nenhum paciente encontrato</td>
     </tr>
   </table>
 
-  <mat-paginator [pageSizeOptions]="[10, 25, 100]" ></mat-paginator>
+  <mat-paginator [pageSizeOptions]="[10, 25, 100]"></mat-paginator>
 </div>

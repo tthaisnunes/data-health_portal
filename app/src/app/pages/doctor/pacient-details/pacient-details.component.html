@@ -3,15 +3,15 @@
     <app-gernal-information [userId]="userId"></app-gernal-information>
   </mat-tab>
   <mat-tab label="Prontuários">
-    <app-medical-record></app-medical-record>
+    <app-medical-record [userId]="userId"></app-medical-record>
   </mat-tab>
   <mat-tab label="Exames Solicitados">
-    <app-exams></app-exams>
+    <app-exams [userId]="userId"></app-exams>
   </mat-tab>
   <mat-tab label="Receitas">
-    <app-medical-prescriptions></app-medical-prescriptions>
+    <app-medical-prescriptions [userId]="userId"></app-medical-prescriptions>
   </mat-tab>
   <mat-tab label="Exames Compartilhados">
-    <app-shared-exams></app-shared-exams>
+    <app-shared-exams [userId]="userId"></app-shared-exams>
   </mat-tab>
 </mat-tab-group>

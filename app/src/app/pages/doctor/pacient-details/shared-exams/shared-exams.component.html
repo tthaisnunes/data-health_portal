@@ -1,8 +1,8 @@
 <div class="content-info">
 
   <mat-form-field appearance="standard">
-    <mat-label>Filter</mat-label>
-    <input matInput (keyup)="applyFilter($event)" placeholder="Ex. ium" #input>
+    <mat-label>Filtrar</mat-label>
+    <input matInput (keyup)="applyFilter($event)" #input>
   </mat-form-field>
 
   <table mat-table [dataSource]="dataSource" class="mat-elevation-z2">
@@ -12,14 +12,14 @@
       <td mat-cell *matCellDef="let element"> {{element.id}} </td>
     </ng-container>
 
-    <ng-container matColumnDef="requestDate">
-      <th mat-header-cell *matHeaderCellDef> Data Solicitada</th>
-      <td mat-cell *matCellDef="let element"> {{element.requestDate | date:'shortDate'}} </td>
+    <ng-container matColumnDef="date">
+      <th mat-header-cell *matHeaderCellDef> Data </th>
+      <td mat-cell *matCellDef="let element"> {{element.date | date : 'dd/MM/yyyy': '' : 'pt-BR'}} </td>
     </ng-container>
 
-    <ng-container matColumnDef="datePerfomeded">
-      <th mat-header-cell *matHeaderCellDef> Data Realizado</th>
-      <td mat-cell *matCellDef="let element"> {{element.datePerfomeded | date:'shortDate'}} </td>
+    <ng-container matColumnDef="description">
+      <th mat-header-cell *matHeaderCellDef> Descrição </th>
+      <td mat-cell *matCellDef="let element"> {{element.description}} </td>
     </ng-container>
 
     <ng-container matColumnDef="imageUrl">
@@ -35,7 +35,8 @@
     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
 
     <tr class="mat-row" *matNoDataRow>
-      <td class="mat-cell" colspan="4">Nenhum prontuário encontrato para "{{input.value}}"</td>
+      <td class="mat-cell" colspan="4">Nenhum exame encontrato</td>
     </tr>
   </table>
+  <mat-paginator [pageSizeOptions]="[10, 25, 100]"></mat-paginator>
 </div>

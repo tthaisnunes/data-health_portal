@@ -19,3 +19,27 @@ export interface PacientData {
   city: string;
   notes: string;
 }
+
+export interface MedicalRecords {
+  id: number;
+  date: Date;
+  description: string;
+  data: string;
+  userId: number;
+}
+export interface Exams {
+  id: number;
+  date: Date;
+  description: string;
+  userId: number;
+  status: string;
+  statusColor: string;
+  imageUrl?: string;
+}
+export interface MedicalPrescriptions {
+  id: number;
+  date: Date;
+  description: string;
+  data: string;
+  userId: number;
+}

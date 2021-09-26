@@ -23,4 +23,28 @@ export class DoctorService {
       map(item => item.filter(item => item.id === id)),
     );
   }
+
+  getMedicalRecords(userId: Number): Observable<Model.MedicalRecords[]> {
+    return this.httpClient.get<Model.MedicalRecords[]>('data/medical-record.json').pipe(
+      map(item => item.filter(item => item.userId === userId)),
+    );
+  }
+
+  getExams(userId: Number): Observable<Model.Exams[]> {
+    return this.httpClient.get<Model.Exams[]>('data/exams.json').pipe(
+      map(item => item.filter(item => item.userId === userId)),
+    );
+  }
+
+  getSharedExams(userId: Number): Observable<Model.Exams[]> {
+    return this.httpClient.get<Model.Exams[]>('data/exams.json').pipe(
+      map(item => item.filter(item => item.userId === userId && item.status.toLocaleLowerCase() === 'compartilhado')),
+    );
+  }
+
+  getMedicalPrescriptions(userId: Number): Observable<Model.MedicalPrescriptions[]> {
+    return this.httpClient.get<Model.MedicalPrescriptions[]>('data/medical-prescriptions.json').pipe(
+      map(item => item.filter(item => item.userId === userId)),
+    );
+  }
 }
