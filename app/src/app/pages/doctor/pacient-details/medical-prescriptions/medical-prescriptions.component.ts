@@ -29,7 +29,7 @@ export class MedicalPrescriptionsComponent {
   ) { }
 
   ngOnInit() {
-    this.service.getMedicalRecords(this.userId).subscribe(res => {
+    this.service.getMedicalPrescriptions(this.userId).subscribe(res => {
       this.medicalPrescriptionsList = res;
       this.dataSource = new MatTableDataSource(this.medicalPrescriptionsList);
 
