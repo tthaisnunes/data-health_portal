@@ -39,8 +39,8 @@ export class DashboardComponent {
       color: colors.green,
     },
     {
-      start: addDays(addHours(startOfDay(new Date()), 12), 5),
-      end: addDays(addHours(startOfDay(new Date()), 13), 5),
+      start: addDays(addHours(startOfDay(new Date()), 12), 8),
+      end: addDays(addHours(startOfDay(new Date()), 13), 8),
       title: 'Consulta - Jessica Fernandes',
       id: 4,
       color: colors.grey,
@@ -63,7 +63,7 @@ export class DashboardComponent {
 
   indicators: Indicator[] = [
     {
-      label: "Consultas cancelas último mês",
+      label: "Consultas canceladas último mês",
       value: 3,
       color: "red",
       status: "down",
