@@ -30,12 +30,12 @@ export class ChartsComponent {
     this.chartOptions = {
       series: [
         {
-          name: "series1",
-          data: [31, 40, 28, 51, 42, 109, 100]
+          name: "Consultas",
+          data: [31, 40, 28, 51, 42, 109, 100, 80, 67] //78, 28, 92
         },
         {
-          name: "series2",
-          data: [11, 32, 45, 32, 34, 52, 41]
+          name: "Retorno",
+          data: [11, 32, 45, 32, 34, 52, 41, 60, 93] //30, 20, 87
         }
       ],
       chart: {
