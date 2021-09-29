@@ -4,16 +4,16 @@
   <form class="form">
     <mat-form-field class="full-width" appearance="fill" *ngIf="!data.id">
       <mat-label>Descrição</mat-label>
-      <input matInput placeholder="Descrição" type="text" autocomplete="off">
+      <input matInput placeholder="Descrição" type="text" autocomplete="off" name="description" [(ngModel)]="data.description">
     </mat-form-field>
 
     <mat-form-field class="full-width" appearance="fill">
       <mat-label>Descrição geral:</mat-label>
-      <textarea matInput placeholder="Descrição completa do paciente" name="data" [(ngModel)]="data.data"></textarea>
+      <textarea matInput placeholder="Descrição completa do paciente" name="data" [(ngModel)]="data.data" [disabled]="data.id ? true : false"></textarea>
     </mat-form-field>
 
     <div class="button-container" *ngIf="!data.id">
-      <button mat-raised-button color="accent" mat-dialog-close>Salvar</button>
+      <button mat-raised-button color="accent" [mat-dialog-close]="data">Salvar</button>
     </div>
   </form>
 </div>

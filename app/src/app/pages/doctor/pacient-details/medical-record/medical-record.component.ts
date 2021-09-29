@@ -17,7 +17,7 @@ import { MatSort } from '@angular/material/sort';
 export class MedicalRecordComponent implements OnInit {
   @Input() userId: number;
   medicalRecordsList: MedicalRecords[];
-  displayedColumns: string[] = ['id', 'date', 'description', 'actions'];
+  displayedColumns: string[] = ['date', 'description', 'actions'];
   dataSource: MatTableDataSource<MedicalRecords>;
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
@@ -28,7 +28,7 @@ export class MedicalRecordComponent implements OnInit {
     public service: DoctorService
   ) { }
 
-  ngOnInit(){
+  ngOnInit() {
     this.service.getMedicalRecords(this.userId).subscribe(res => {
       this.medicalRecordsList = res;
       this.dataSource = new MatTableDataSource(this.medicalRecordsList);
@@ -44,10 +44,27 @@ export class MedicalRecordComponent implements OnInit {
   }
 
   openDialogManagement(item?: MedicalRecords) {
-    this.dialog.open(ManagementModalComponent, {
+    const dialogRef = this.dialog.open(ManagementModalComponent, {
       width: '1080px',
       data: {
         ...item
+      }
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      if (result) {
+        this.medicalRecordsList.push({
+          id: 999,
+          date: new Date(),
+          description: result.description,
+          data: result.data,
+          userId: this.userId
+        });
+
+        this.dataSource = new MatTableDataSource(this.medicalRecordsList);
+
+        this.dataSource.paginator = this.paginator;
+        this.dataSource.sort = this.sort;
       }
     });
   }

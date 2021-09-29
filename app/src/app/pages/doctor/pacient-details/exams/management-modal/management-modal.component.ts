@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
+import { MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { Exams } from '../../../doctor.model';
 
 @Component({
   selector: 'app-management-modal',
@@ -7,7 +9,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ManagementModalExamsComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    @Inject(MAT_DIALOG_DATA) public data: Exams
+  ) { }
 
   ngOnInit(): void {
   }

@@ -17,7 +17,7 @@ import { MatSort } from '@angular/material/sort';
 export class MedicalPrescriptionsComponent {
   @Input() userId: number;
   medicalPrescriptionsList: MedicalPrescriptions[];
-  displayedColumns: string[] = ['id', 'date', 'description', 'actions'];
+  displayedColumns: string[] = ['date', 'description', 'actions'];
   dataSource: MatTableDataSource<MedicalPrescriptions>;
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
@@ -48,6 +48,23 @@ export class MedicalPrescriptionsComponent {
       width: '1080px',
       data: {
         ...item
+      }
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      if (result) {
+        this.medicalPrescriptionsList.push({
+          id: 999,
+          date: new Date(),
+          description: result.description,
+          data: result.data,
+          userId: this.userId
+        });
+
+        this.dataSource = new MatTableDataSource(this.medicalPrescriptionsList);
+
+        this.dataSource.paginator = this.paginator;
+        this.dataSource.sort = this.sort;
       }
     });
   }

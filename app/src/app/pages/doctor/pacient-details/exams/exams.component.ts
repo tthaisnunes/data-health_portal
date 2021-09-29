@@ -17,7 +17,7 @@ export class ExamsComponent implements OnInit {
   @Input() userId: number;
   examsList: Exams[];
 
-  displayedColumns: string[] = ['id', 'date', 'description', 'status'];
+  displayedColumns: string[] = ['date', 'description', 'status'];
   dataSource: MatTableDataSource<Exams>;
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
@@ -46,11 +46,26 @@ export class ExamsComponent implements OnInit {
 
   openDialogManagement() {
     const dialogRef = this.dialog.open(ManagementModalExamsComponent, {
-      width: '500px'
+      width: '500px',
+      data: {}
     });
 
     dialogRef.afterClosed().subscribe(result => {
-      console.log(`Dialog result: ${result}`);
+      if (result) {
+        this.examsList.push({
+          id: 999,
+          date: new Date(),
+          description: result.description,
+          userId: this.userId,
+          status: 'solicitado',
+          statusColor: 'grey'
+        });
+
+        this.dataSource = new MatTableDataSource(this.examsList);
+
+        this.dataSource.paginator = this.paginator;
+        this.dataSource.sort = this.sort;
+      }
     });
   }
 
