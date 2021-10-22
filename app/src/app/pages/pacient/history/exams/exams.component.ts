@@ -4,9 +4,9 @@ import { MatTableDataSource } from '@angular/material/table';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 
-import { ManagementModalExamsComponent } from './management-modal/management-modal.component';
-import { DoctorService } from '../../doctor.service';
-import { Exams } from '../../doctor.model';
+import { ManagementModalComponent } from './management-modal/management-modal.component';
+import { DoctorService } from '../../pacient.service';
+import { Exams } from '../../pacient.model';
 
 @Component({
   selector: 'app-exams',
@@ -38,13 +38,14 @@ export class ExamsComponent implements OnInit {
     });
   }
 
+
   applyFilter(event: Event) {
     const filterValue = (event.target as HTMLInputElement).value;
     this.dataSource.filter = filterValue.trim().toLowerCase();
   }
 
   openDialogManagement() {
-    const dialogRef = this.dialog.open(ManagementModalExamsComponent, {
+    const dialogRef = this.dialog.open(ManagementModalComponent, {
       width: '500px',
       data: {}
     });
@@ -67,5 +68,4 @@ export class ExamsComponent implements OnInit {
       }
     });
   }
-
 }

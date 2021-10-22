@@ -2,15 +2,15 @@ import { Component, Input, OnInit } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
 
-import { PacientData } from '../../doctor.model';
-import { DoctorService } from '../../doctor.service';
+import { PacientData } from '../../pacient.model';
+import { DoctorService } from '../../pacient.service';
 
 @Component({
-  selector: 'app-gernal-information',
-  templateUrl: './gernal-information.component.html',
-  styleUrls: ['./gernal-information.component.scss']
+  selector: 'app-general-information',
+  templateUrl: './general-information.component.html',
+  styleUrls: ['./general-information.component.scss']
 })
-export class GernalInformationComponent implements OnInit {
+export class GeneralInformationComponent implements OnInit {
   @Input() userId: number;
   pacientData: PacientData;
   pacientForm = this.fb.group({
@@ -70,5 +70,4 @@ export class GernalInformationComponent implements OnInit {
       panelClass: 'white'
     });
   }
-
 }

@@ -1,0 +1,116 @@
+<div class="content-info">
+  <form class="form" [formGroup]="pacientForm">
+    <p>Informações Pessoais</p>
+    <div>
+      <mat-form-field class="full-width" appearance="fill">
+        <mat-label>Nome Completo</mat-label>
+        <input matInput placeholder="Nome" type="text" autocomplete="off" formControlName="name">
+      </mat-form-field>
+    </div>
+
+    <div>
+      <mat-form-field class="full-width" appearance="fill">
+        <mat-label>Idade</mat-label>
+        <input matInput placeholder="Idade" type="number" autocomplete="off" formControlName="age">
+      </mat-form-field>
+    </div>
+
+    <div>
+      <mat-form-field class="full-width" appearance="fill">
+        <mat-label>Altura</mat-label>
+        <input matInput placeholder="Altura" type="number" autocomplete="off" formControlName="height">
+      </mat-form-field>
+    </div>
+
+    <div>
+      <mat-form-field class="full-width" appearance="fill">
+        <mat-label>Peso</mat-label>
+        <input matInput placeholder="Peso" type="number" autocomplete="off" formControlName="weight">
+      </mat-form-field>
+    </div>
+
+    <p>Informações de Contato</p>
+    <div>
+      <mat-form-field class="full-width" appearance="fill">
+        <mat-label>E-mail</mat-label>
+        <input matInput placeholder="E-mail" type="mail" autocomplete="off" formControlName="mail">
+      </mat-form-field>
+    </div>
+
+    <div>
+      <mat-form-field class="full-width" appearance="fill">
+        <mat-label>Telefone</mat-label>
+        <input matInput placeholder="Telefone" type="tel" autocomplete="off" formControlName="phone">
+      </mat-form-field>
+    </div>
+
+    <div>
+      <mat-form-field class="full-width" appearance="fill">
+        <mat-label>Celular</mat-label>
+        <input matInput placeholder="Telefone" type="tel" autocomplete="off" formControlName="cellPhone">
+      </mat-form-field>
+    </div>
+
+    <p>Endereço</p>
+    <div>
+      <mat-form-field class="full-width" appearance="fill">
+        <mat-label>Cep</mat-label>
+        <input matInput placeholder="Cep" type="text" autocomplete="off" formControlName="zipCode">
+      </mat-form-field>
+    </div>
+
+    <div>
+      <mat-form-field class="full-width" appearance="fill">
+        <mat-label>Rua</mat-label>
+        <input matInput placeholder="Rua" type="text" autocomplete="off" formControlName="street">
+      </mat-form-field>
+    </div>
+
+    <div>
+      <mat-form-field class="full-width" appearance="fill">
+        <mat-label>Número</mat-label>
+        <input matInput placeholder="Número" type="number" autocomplete="off" formControlName="streetNumber">
+      </mat-form-field>
+    </div>
+
+    <div>
+      <mat-form-field class="full-width" appearance="fill">
+        <mat-label>Complemento</mat-label>
+        <input matInput placeholder="Complemento" type="text" autocomplete="off" formControlName="complement">
+      </mat-form-field>
+    </div>
+
+    <div>
+      <mat-form-field class="full-width" appearance="fill">
+        <mat-label>Bairro</mat-label>
+        <input matInput placeholder="Bairro" type="text" autocomplete="off" formControlName="neighborhood">
+      </mat-form-field>
+    </div>
+
+    <div>
+      <mat-form-field class="full-width" appearance="fill">
+        <mat-label>Estado</mat-label>
+        <input matInput placeholder="Estado" type="text" autocomplete="off" formControlName="state">
+      </mat-form-field>
+    </div>
+
+    <div>
+      <mat-form-field class="full-width" appearance="fill">
+        <mat-label>Cidade</mat-label>
+        <input matInput placeholder="Cidade" type="text" autocomplete="off" formControlName="city">
+      </mat-form-field>
+    </div>
+
+    <p>Observações Gerais</p>
+    <div>
+      <mat-form-field appearance="fill" class="full-width">
+        <mat-label>Textarea</mat-label>
+        <textarea matInput formControlName="notes"></textarea>
+      </mat-form-field>
+    </div>
+
+    <div class="button">
+      <button mat-flat-button color="accent" (click)="onSave()">Salvar</button>
+    </div>
+  </form>
+</div>
