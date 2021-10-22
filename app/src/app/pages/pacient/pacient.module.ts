@@ -7,7 +7,6 @@ import { SharedModule } from '../../components/shared/shared.module';
 import { PacientRoutingModule } from './pacient-routing.module';
 import { HistoryComponent } from './history/history.component';
 import { DoctorCalendarComponent } from './doctor-calendar/doctor-calendar.component';
-import { DashboardComponent } from '../pacient/dashboard/dashboard.component';
 import { MedicalClinicListComponent } from './medical-clinic-list/medical-clinic-list.component';
 import { GeneralInformationComponent } from './history/general-information/general-information.component';
 import { MedicalRecordComponent } from './history/medical-record/medical-record.component';
@@ -22,7 +21,6 @@ import { ViewExamModalComponent } from './history/shared-exams/view-exam-modal/v
   declarations: [
     HistoryComponent,
     DoctorCalendarComponent,
-    DashboardComponent,
     MedicalClinicListComponent,
     GeneralInformationComponent,
     MedicalRecordComponent,

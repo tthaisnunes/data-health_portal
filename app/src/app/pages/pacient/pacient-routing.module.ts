@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { DashboardComponent } from '../pacient/dashboard/dashboard.component';
+import { DashboardPacientComponent } from '../pacient/dashboard/dashboard.component';
 import { DoctorCalendarComponent } from './doctor-calendar/doctor-calendar.component';
 import { MedicalClinicListComponent } from './medical-clinic-list/medical-clinic-list.component';
 import { HistoryComponent } from './history/history.component';
@@ -9,7 +9,7 @@ import { HistoryComponent } from './history/history.component';
 const routes: Routes = [
   {
     path: 'dashboard',
-    component: DashboardComponent
+    component: DashboardPacientComponent
   },
   {
     path: 'doctor-calendar',
