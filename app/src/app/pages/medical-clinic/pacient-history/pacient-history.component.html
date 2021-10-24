@@ -1,11 +1,11 @@
 <mat-tab-group>
   <mat-tab label="Informações gerais">
-    <app-general-information></app-general-information>
+    <app-general-information [userId]="userId"></app-general-information>
   </mat-tab>
   <mat-tab label="Exames solicitados">
-    <app-medical-prescriptions></app-medical-prescriptions>
+    <app-medical-prescriptions [userId]="userId"></app-medical-prescriptions>
   </mat-tab>
   <mat-tab label="Exames realizados">
-    <app-medical-record></app-medical-record>
+    <app-medical-record [userId]="userId"></app-medical-record>
   </mat-tab>
 </mat-tab-group>

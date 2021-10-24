@@ -5,7 +5,7 @@
     "requestedDate": "10/22/21",
     "scheduledDate": "10/25/21",
     "description": "Ultrassom abdomem total",
-    "guia": "../../../../../../assets/images/medical-prescriptions/mp-01.png",
+    "guia": "../../../../../../assets/images/medical-prescriptions/mp-01.jpg",
     "result": "",
     "statusColor": "green",
     "status": "Pendente"
@@ -16,7 +16,7 @@
     "requestedDate": "10/22/21",
     "scheduledDate": "10/25/21",
     "description": "Histopatológico",
-    "guia": "../../../../../../assets/images/medical-prescriptions/mp-02.png",
+    "guia": "../../../../../../assets/images/medical-prescriptions/mp-02.jpg",
     "result": "",
     "statusColor": "green",
     "status": "Pendente"
@@ -26,8 +26,8 @@
     "userId": 13,
     "requestedDate": "10/22/21",
     "scheduledDate": "10/25/21",
-    "description": "Histopatológico",
-    "guia": "../../../../../../assets/images/medical-prescriptions/mp-02.png",
+    "description": "Ultrassom",
+    "guia": "../../../../../../assets/images/medical-prescriptions/mp-02.jpg",
     "result": "",
     "statusColor": "green",
     "status": "Pendente"
@@ -37,8 +37,8 @@
     "userId": 18,
     "requestedDate": "10/22/21",
     "scheduledDate": "10/25/21",
-    "description": "Ultrassom abdomem total",
-    "guia": "../../../../../../assets/images/medical-prescriptions/mp-01.png",
+    "description": "Ultrassom",
+    "guia": "../../../../../../assets/images/medical-prescriptions/mp-01.jpg",
     "result": "",
     "statusColor": "green",
     "status": "Pendente"
@@ -49,7 +49,7 @@
     "requestedDate": "10/22/21",
     "scheduledDate": "10/25/21",
     "description": "Hemograma plaquetas total",
-    "guia": "../../../../../../assets/images/medical-prescriptions/mp-02.png",
+    "guia": "../../../../../../assets/images/medical-prescriptions/mp-02.jpg",
     "result": "",
     "statusColor": "green",
     "status": "Aguardando resultado"
@@ -60,7 +60,7 @@
     "requestedDate": "10/22/21",
     "scheduledDate": "10/25/21",
     "description": "Raio X",
-    "guia": "../../../../../../assets/images/medical-prescriptions/mp-01.png",
+    "guia": "../../../../../../assets/images/medical-prescriptions/mp-01.jpg",
     "result": "",
     "statusColor": "green",
     "status": "Aguardando resultado"
@@ -70,8 +70,8 @@
     "userId": 14,
     "requestedDate": "10/22/21",
     "scheduledDate": "10/25/21",
-    "description": "Raio X",
-    "guia": "../../../../../../assets/images/medical-prescriptions/mp-01.png",
+    "description": "Ultrassom",
+    "guia": "../../../../../../assets/images/medical-prescriptions/mp-01.jpg",
     "result": "",
     "statusColor": "green",
     "status": "Aguardando resultado"
@@ -81,8 +81,8 @@
     "userId": 17,
     "requestedDate": "10/22/21",
     "scheduledDate": "10/25/21",
-    "description": "Hemograma plaquetas total",
-    "guia": "../../../../../../assets/images/medical-prescriptions/mp-02.png",
+    "description": "Ultrassom",
+    "guia": "../../../../../../assets/images/medical-prescriptions/mp-02.jpg",
     "result": "",
     "statusColor": "green",
     "status": "Aguardando resultado"
@@ -92,8 +92,8 @@
     "userId": 21,
     "requestedDate": "10/22/21",
     "scheduledDate": "10/25/21",
-    "description": "Ultrassom abdomem total",
-    "guia": "../../../../../../assets/images/medical-prescriptions/mp-02.png",
+    "description": "Ultrassom",
+    "guia": "../../../../../../assets/images/medical-prescriptions/mp-02.jpg",
     "result": "",
     "statusColor": "blue",
     "status": "Finalizado"
@@ -103,8 +103,8 @@
     "userId": 22,
     "requestedDate": "10/22/21",
     "scheduledDate": "10/25/21",
-    "description": "Hemograma plaquetas total",
-    "guia": "../../../../../../assets/images/medical-prescriptions/mp-02.png",
+    "description": "Ultrassom",
+    "guia": "../../../../../../assets/images/medical-prescriptions/mp-02.jpg",
     "result": "",
     "statusColor": "blue",
     "status": "Finalizado"
@@ -115,8 +115,8 @@
     "requestedDate": "10/22/21",
     "scheduledDate": "10/25/21",
     "description": "Hemograma plaquetas total",
-    "guia": "../../../../../../assets/images/medical-prescriptions/mp-01.png",
-    "result": "../../../../../../assets/images/results/r-01.png",
+    "guia": "../../../../../../assets/images/medical-prescriptions/mp-01.jpg",
+    "result": "../../../../../assets/images/results/r-01.jpg",
     "statusColor": "blue",
     "status": "Finalizado"
   }
