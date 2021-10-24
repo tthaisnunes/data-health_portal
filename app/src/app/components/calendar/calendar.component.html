@@ -21,6 +21,7 @@
     </mwl-calendar-month-view>
 
     <mwl-calendar-week-view *ngIf="showWeek" [viewDate]="viewDate" [events]="events" [refresh]="refresh"
+      [hourSegments]="hourSegments" [dayStartHour]="dayStartHour" [dayEndHour]="dayEndHour"
       (eventClicked)="eventClicked($event)">
     </mwl-calendar-week-view>
 

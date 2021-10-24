@@ -22,7 +22,8 @@ import { CalendarComponent } from './components/calendar/calendar.component';
 import { IndicatorComponent } from './components/indicator/indicator.component';
 import { ChartsComponent } from './components/chart/chart.component';
 import { MAT_DATE_LOCALE } from '@angular/material/core';
-import { NgxMaskModule, IConfig } from 'ngx-mask'
+import { NgxMaskModule, IConfig } from 'ngx-mask';
+import { ViewCalendarModalComponent } from './pages/pacient/doctor-list/view-calendar-modal/view-calendar-modal.component';
 
 registerLocaleData(localePt, 'pt');
 
@@ -38,7 +39,8 @@ export function momentAdapterFactory() {
     CalendarDoctorComponent,
     CalendarComponent,
     IndicatorComponent,
-    ChartsComponent
+    ChartsComponent,
+    ViewCalendarModalComponent
   ],
   imports: [
     BrowserModule,

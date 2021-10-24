@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 import { DashboardPacientComponent } from '../pacient/dashboard/dashboard.component';
-import { DoctorCalendarComponent } from './doctor-calendar/doctor-calendar.component';
+import { DoctorListComponent } from './doctor-list/doctor-list.component';
 import { MedicalClinicListComponent } from './medical-clinic-list/medical-clinic-list.component';
 import { HistoryComponent } from './history/history.component';
 
@@ -12,8 +12,8 @@ const routes: Routes = [
     component: DashboardPacientComponent
   },
   {
-    path: 'doctor-calendar',
-    component: DoctorCalendarComponent
+    path: 'doctor-list',
+    component: DoctorListComponent
   },
   {
     path: 'medical-clinic-list',

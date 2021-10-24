@@ -16,6 +16,7 @@ import { SharedExamsComponent } from './history/shared-exams/shared-exams.compon
 import { ManagementModalComponent } from './history/exams/management-modal/management-modal.component';
 import { ManagementModalRecordsComponent } from './history/medical-record/management-modal/management-modal.component';
 import { ViewExamModalComponent } from './history/shared-exams/view-exam-modal/view-exam-modal.component';
+import { DoctorListComponent } from './doctor-list/doctor-list.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { ViewExamModalComponent } from './history/shared-exams/view-exam-modal/v
     SharedExamsComponent,
     ManagementModalComponent,
     ManagementModalRecordsComponent,
-    ViewExamModalComponent
+    ViewExamModalComponent,
+    DoctorListComponent
   ],
   imports: [
     CommonModule,

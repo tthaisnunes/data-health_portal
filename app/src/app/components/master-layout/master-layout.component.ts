@@ -45,7 +45,7 @@ export class MasterLayoutComponent implements OnInit {
     },
     {
       name: 'Médicos',
-      path: '/pacient/doctor-calendar'
+      path: '/pacient/doctor-list'
     },
     {
       name: 'Clínicas',
