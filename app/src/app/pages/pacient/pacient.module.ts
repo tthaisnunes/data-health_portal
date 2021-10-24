@@ -16,7 +16,7 @@ import { ManagementModalComponent } from './history/exams/management-modal/manag
 import { ManagementModalRecordsComponent } from './history/medical-record/management-modal/management-modal.component';
 import { ViewExamModalComponent } from './history/shared-exams/view-exam-modal/view-exam-modal.component';
 import { DoctorListComponent } from './doctor-list/doctor-list.component';
-import { ViewCalendarClinicModalComponent } from './medical-clinic-list/view-calendar-clinic-modal/view-calendar-clinic-modal.component';
+
 
 @NgModule({
   declarations: [
@@ -30,8 +30,7 @@ import { ViewCalendarClinicModalComponent } from './medical-clinic-list/view-cal
     ManagementModalComponent,
     ManagementModalRecordsComponent,
     ViewExamModalComponent,
-    DoctorListComponent,
-    ViewCalendarClinicModalComponent
+    DoctorListComponent
   ],
   imports: [
     CommonModule,
