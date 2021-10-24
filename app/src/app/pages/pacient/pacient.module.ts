@@ -6,7 +6,6 @@ import { SharedModule } from '../../components/shared/shared.module';
 
 import { PacientRoutingModule } from './pacient-routing.module';
 import { HistoryComponent } from './history/history.component';
-import { DoctorCalendarComponent } from './doctor-calendar/doctor-calendar.component';
 import { MedicalClinicListComponent } from './medical-clinic-list/medical-clinic-list.component';
 import { GeneralInformationComponent } from './history/general-information/general-information.component';
 import { MedicalRecordComponent } from './history/medical-record/medical-record.component';
@@ -17,11 +16,11 @@ import { ManagementModalComponent } from './history/exams/management-modal/manag
 import { ManagementModalRecordsComponent } from './history/medical-record/management-modal/management-modal.component';
 import { ViewExamModalComponent } from './history/shared-exams/view-exam-modal/view-exam-modal.component';
 import { DoctorListComponent } from './doctor-list/doctor-list.component';
+import { ViewCalendarClinicModalComponent } from './medical-clinic-list/view-calendar-clinic-modal/view-calendar-clinic-modal.component';
 
 @NgModule({
   declarations: [
     HistoryComponent,
-    DoctorCalendarComponent,
     MedicalClinicListComponent,
     GeneralInformationComponent,
     MedicalRecordComponent,
@@ -31,7 +30,8 @@ import { DoctorListComponent } from './doctor-list/doctor-list.component';
     ManagementModalComponent,
     ManagementModalRecordsComponent,
     ViewExamModalComponent,
-    DoctorListComponent
+    DoctorListComponent,
+    ViewCalendarClinicModalComponent
   ],
   imports: [
     CommonModule,
