@@ -26,6 +26,7 @@ import { NgxMaskModule, IConfig } from 'ngx-mask';
 import { ViewCalendarModalComponent } from './pages/pacient/doctor-list/view-calendar-modal/view-calendar-modal.component';
 import { ViewCalendarClinicModalComponent } from './pages/pacient/medical-clinic-list/view-calendar-clinic-modal/view-calendar-clinic-modal.component';
 import { CalendarClinicComponent } from './pages/medical-clinic/calendar/calendar.component';
+import { DashboardMedicalClinicComponent } from './pages/medical-clinic/dashboard/dashboard.component';
 
 registerLocaleData(localePt, 'pt');
 
@@ -44,7 +45,8 @@ export function momentAdapterFactory() {
     ChartsComponent,
     ViewCalendarModalComponent,
     ViewCalendarClinicModalComponent,
-    CalendarClinicComponent
+    CalendarClinicComponent,
+    DashboardMedicalClinicComponent
   ],
   imports: [
     BrowserModule,
