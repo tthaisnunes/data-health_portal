@@ -1,19 +1,13 @@
 <div class="content-modal">
-  <h2>Prontuário</h2>
+  <h2>Resultado:</h2>
 
-  <form class="form">
-    <mat-form-field class="full-width" appearance="fill" *ngIf="!data.id">
-      <mat-label>Descrição</mat-label>
-      <input matInput placeholder="Descrição" type="text" autocomplete="off" name="description" [(ngModel)]="data.description">
-    </mat-form-field>
+  <form class="form" *ngIf="data.action === 'add'">
+    <input placeholder="Descrição" type="file" autocomplete="off" required>
 
-    <mat-form-field class="full-width" appearance="fill">
-      <mat-label>Descrição geral:</mat-label>
-      <textarea matInput placeholder="Descrição completa do paciente" name="data" [(ngModel)]="data.data" [disabled]="data.id ? true : false"></textarea>
-    </mat-form-field>
-
-    <div class="button-container" *ngIf="!data.id">
+    <div class="button-container">
       <button mat-raised-button color="accent" [mat-dialog-close]="data">Salvar</button>
     </div>
   </form>
+
+  <img src="{{data.result}}" alt="" *ngIf="data.action === 'view'">
 </div>

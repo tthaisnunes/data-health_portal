@@ -2,7 +2,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap");
 @import "../node_modules/angular-calendar/css/angular-calendar.css";
 
-
 html,
 body {
   height: 100%;
@@ -12,11 +11,15 @@ body {
 }
 
 body * {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 
 .white {
   background-color: #00f93633 !important;
   color: #000 !important;
   text-align: center;
+}
+
+.mat-dialog-container {
+  height: auto !important;
 }

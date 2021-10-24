@@ -1,5 +1,5 @@
 .content-modal {
-  min-height: 60vh;
+  min-height: 20vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -8,6 +8,9 @@
 .form {
   min-width: 150px;
   width: 100%;
+  background: #dddddd;
+  padding: 2em;
+  box-sizing: border-box;
 
   textarea {
     min-height: 50vh;

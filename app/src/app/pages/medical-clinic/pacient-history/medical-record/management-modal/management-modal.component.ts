@@ -1,6 +1,6 @@
-import { Component, Inject, OnInit } from '@angular/core';
+import { Component, Inject } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
-import { MedicalRecords } from '../../../medical-clinic.model';
+import { MCExam } from '../../../medical-clinic.model';
 
 @Component({
   selector: 'app-management-modal',
@@ -10,7 +10,7 @@ import { MedicalRecords } from '../../../medical-clinic.model';
 export class ManagementModalComponent {
   constructor(
     public dialogRef: MatDialogRef<ManagementModalComponent>,
-    @Inject(MAT_DIALOG_DATA) public data: MedicalRecords
+    @Inject(MAT_DIALOG_DATA) public data: MCExam
   ) { }
 
   onNoClick(): void {

@@ -1,12 +1,13 @@
-import { Component, Input, OnInit, ViewChild } from '@angular/core';
+import { Component, Input, ViewChild } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { MatTableDataSource } from '@angular/material/table';
 import { ManagementModalComponent } from './management-modal/management-modal.component';
 
-import { MedicalRecords } from '../../medical-clinic.model';
+import { MCExam } from '../../medical-clinic.model';
 import { MedicalClinicService } from '../../medical-clinic.service';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
+
 
 @Component({
   selector: 'app-medical-record',
@@ -14,11 +15,11 @@ import { MatSort } from '@angular/material/sort';
   styleUrls: ['./medical-record.component.scss']
 })
 
-export class MedicalRecordComponent implements OnInit {
+export class MedicalRecordComponent {
   @Input() userId: number;
-  medicalRecordsList: MedicalRecords[];
-  displayedColumns: string[] = ['date', 'description', 'actions'];
-  dataSource: MatTableDataSource<MedicalRecords>;
+  medicalPrescriptionsList: MCExam[];
+  displayedColumns: string[] = ['requestedDate', 'scheduledDate', 'description', 'status', 'result'];
+  dataSource: MatTableDataSource<MCExam>;
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
@@ -29,9 +30,9 @@ export class MedicalRecordComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.service.getMedicalRecords(this.userId).subscribe(res => {
-      this.medicalRecordsList = res;
-      this.dataSource = new MatTableDataSource(this.medicalRecordsList);
+    this.service.getMCCompletedExams(this.userId).subscribe(res => {
+      this.medicalPrescriptionsList = res;
+      this.dataSource = new MatTableDataSource(this.medicalPrescriptionsList);
 
       this.dataSource.paginator = this.paginator;
       this.dataSource.sort = this.sort;
@@ -43,29 +44,29 @@ export class MedicalRecordComponent implements OnInit {
     this.dataSource.filter = filterValue.trim().toLowerCase();
   }
 
-  openDialogManagement(item?: MedicalRecords) {
+  openDialogManagement(item: MCExam, action?: string) {
     const dialogRef = this.dialog.open(ManagementModalComponent, {
-      width: '1080px',
+      width: '1580px',
       data: {
-        ...item
+        ...item,
+        action
       }
     });
 
     dialogRef.afterClosed().subscribe(result => {
       if (result) {
-        this.medicalRecordsList.push({
-          id: 999,
-          date: new Date(),
-          description: result.description,
-          data: result.data,
-          userId: this.userId
-        });
+        console.log(item);
+      };
+      const updatedItem = this.medicalPrescriptionsList.filter(i => i.id === item.id);
+      updatedItem[0].result = '../../../../../assets/images/results/r-01.jpg';
 
-        this.dataSource = new MatTableDataSource(this.medicalRecordsList);
+      this.dataSource = new MatTableDataSource(this.medicalPrescriptionsList);
 
-        this.dataSource.paginator = this.paginator;
-        this.dataSource.sort = this.sort;
-      }
+      this.dataSource.paginator = this.paginator;
+      this.dataSource.sort = this.sort;
+
     });
+
+
   }
 }

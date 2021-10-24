@@ -53,5 +53,6 @@ export interface MCExam {
   guia: string,
   result: string,
   statusColor: string,
-  status: string
+  status: string,
+  action?: string
 }
