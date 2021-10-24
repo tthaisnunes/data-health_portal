@@ -1,19 +1,4 @@
 <div class="content-modal">
-  <h2>Receita</h2>
-
-  <form class="form">
-    <mat-form-field class="full-width" appearance="fill" *ngIf="!data.id">
-      <mat-label>Descrição</mat-label>
-      <input matInput placeholder="Descrição" type="text" autocomplete="off" name="description" [(ngModel)]="data.description">
-    </mat-form-field>
-
-    <mat-form-field class="full-width" appearance="fill">
-      <mat-label>Descrição geral:</mat-label>
-      <textarea matInput placeholder="Receita médica" name="data" [(ngModel)]="data.data" [disabled]="data.id ? true : false"></textarea>
-    </mat-form-field>
-
-    <div class="button-container" *ngIf="!data.id">
-      <button mat-raised-button color="accent" [mat-dialog-close]="data">Salvar</button>
-    </div>
-  </form>
+  <h2>Guia para exame:</h2>
+  <img src="{{data.guia}}" alt="">
 </div>

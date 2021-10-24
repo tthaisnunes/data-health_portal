@@ -3,7 +3,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { MatTableDataSource } from '@angular/material/table';
 import { ManagementModalPrescriptionComponent } from './management-modal-prescription/management-modal-prescription.component';
 
-import { MedicalPrescriptions } from '../../medical-clinic.model';
+import { MCExam } from '../../medical-clinic.model';
 import { MedicalClinicService } from '../../medical-clinic.service';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
@@ -16,9 +16,9 @@ import { MatSort } from '@angular/material/sort';
 
 export class MedicalPrescriptionsComponent {
   @Input() userId: number;
-  medicalPrescriptionsList: MedicalPrescriptions[];
-  displayedColumns: string[] = ['date', 'description', 'actions'];
-  dataSource: MatTableDataSource<MedicalPrescriptions>;
+  medicalPrescriptionsList: MCExam[];
+  displayedColumns: string[] = ['requestedDate', 'scheduledDate', 'description', 'guia'];
+  dataSource: MatTableDataSource<MCExam>;
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
@@ -29,7 +29,7 @@ export class MedicalPrescriptionsComponent {
   ) { }
 
   ngOnInit() {
-    this.service.getMedicalPrescriptions(this.userId).subscribe(res => {
+    this.service.getMCExams(this.userId).subscribe(res => {
       this.medicalPrescriptionsList = res;
       this.dataSource = new MatTableDataSource(this.medicalPrescriptionsList);
 
@@ -43,29 +43,14 @@ export class MedicalPrescriptionsComponent {
     this.dataSource.filter = filterValue.trim().toLowerCase();
   }
 
-  openDialogManagement(item?: MedicalPrescriptions) {
+  openDialogManagement(item?: MCExam) {
     const dialogRef = this.dialog.open(ManagementModalPrescriptionComponent, {
-      width: '1080px',
+      width: '1580px',
       data: {
         ...item
       }
     });
 
-    dialogRef.afterClosed().subscribe(result => {
-      if (result) {
-        this.medicalPrescriptionsList.push({
-          id: 999,
-          date: new Date(),
-          description: result.description,
-          data: result.data,
-          userId: this.userId
-        });
 
-        this.dataSource = new MatTableDataSource(this.medicalPrescriptionsList);
-
-        this.dataSource.paginator = this.paginator;
-        this.dataSource.sort = this.sort;
-      }
-    });
   }
 }

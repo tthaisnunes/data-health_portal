@@ -43,3 +43,15 @@ export interface MedicalPrescriptions {
   data: string;
   userId: number;
 }
+
+export interface MCExam {
+  id: number,
+  userId: number,
+  requestedDate: Date,
+  scheduledDate: Date,
+  description: string,
+  guia: string,
+  result: string,
+  statusColor: string,
+  status: string
+}

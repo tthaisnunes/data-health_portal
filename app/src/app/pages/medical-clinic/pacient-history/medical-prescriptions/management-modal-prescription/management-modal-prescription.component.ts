@@ -1,6 +1,6 @@
 import { Component, Inject } from '@angular/core';
 import { MAT_DIALOG_DATA } from '@angular/material/dialog';
-import { MedicalPrescriptions } from '../../../medical-clinic.model';
+import { MCExam } from '../../../medical-clinic.model';
 
 @Component({
   selector: 'app-management-modal-prescription',
@@ -8,5 +8,8 @@ import { MedicalPrescriptions } from '../../../medical-clinic.model';
   styleUrls: ['./management-modal-prescription.component.scss']
 })
 export class ManagementModalPrescriptionComponent {
-  constructor(@Inject(MAT_DIALOG_DATA) public data: MedicalPrescriptions) { }
+  constructor(@Inject(MAT_DIALOG_DATA) public data: MCExam) {
+   }
+
+
 }

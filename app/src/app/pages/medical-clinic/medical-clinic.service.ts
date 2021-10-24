@@ -47,4 +47,11 @@ export class MedicalClinicService {
       map(item => item.filter(item => item.userId === userId)),
     );
   }
+
+
+  getMCExams(userId: Number): Observable<Model.MCExam[]> {
+    return this.httpClient.get<Model.MCExam[]>('data/medical-clinic-exam.json').pipe(
+      map(item => item.filter(item => item.userId === userId)),
+    );
+  }
 }
