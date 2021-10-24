@@ -43,3 +43,10 @@ export interface MedicalPrescriptions {
   data: string;
   userId: number;
 }
+
+export interface Doctor {
+  id: number,
+  name: string,
+  area: string,
+  calendar: []
+}

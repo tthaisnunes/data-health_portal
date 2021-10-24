@@ -47,4 +47,8 @@ export class DoctorService {
       map(item => item.filter(item => item.userId === userId)),
     );
   }
+
+  getDoctors(): Observable<Model.Doctor[]> {
+    return this.httpClient.get<Model.Doctor[]>('data/doctor.json');
+  }
 }

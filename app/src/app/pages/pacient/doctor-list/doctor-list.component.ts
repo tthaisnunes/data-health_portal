@@ -3,7 +3,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { MatTableDataSource } from '@angular/material/table';
 import { ViewCalendarModalComponent } from './view-calendar-modal/view-calendar-modal.component';
 
-import { Exams } from '../pacient.model';
+import { Doctor } from '../pacient.model';
 import { DoctorService } from '../pacient.service';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
@@ -16,27 +16,9 @@ import { MatSort } from '@angular/material/sort';
 export class DoctorListComponent {
 
   @Input() userId: number;
-  examsList: Exams[];
+  doctorList: Doctor[];
   displayedColumns: string[] = ['id', 'name', 'area', 'action'];
   dataSource: MatTableDataSource<any>;
-  data = [{
-    id: 1,
-    name: 'João Paulo de Souza',
-    area: 'Cargiologista',
-    calendar: []
-  },
-  {
-    id: 1,
-    name: 'João Paulo de Souza',
-    area: 'Oftalmo',
-    calendar: []
-  },
-  {
-    id: 1,
-    name: 'João Paulo de Souza',
-    area: 'Padiatra',
-    calendar: []
-  }]
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
@@ -47,10 +29,9 @@ export class DoctorListComponent {
   ) { }
 
   ngOnInit() {
-    this.service.getSharedExams(this.userId).subscribe(res => {
-      this.examsList = res;
-      // this.dataSource = new MatTableDataSource(this.examsList);
-      this.dataSource = new MatTableDataSource(this.data);
+    this.service.getDoctors().subscribe(res => {
+      this.doctorList = res;
+      this.dataSource = new MatTableDataSource(this.doctorList);
 
       this.dataSource.paginator = this.paginator;
       this.dataSource.sort = this.sort;
@@ -63,7 +44,7 @@ export class DoctorListComponent {
     this.dataSource.filter = filterValue.trim().toLowerCase();
   }
 
-  openDialogManagement(item: Exams) {
+  openDialogManagement(item: Doctor) {
     const dialogRef = this.dialog.open(ViewCalendarModalComponent, {
       width: '1080px',
       data: {
