@@ -15,7 +15,10 @@ export class MedicalClinicService {
   ) { }
 
   getUsersList(): Observable<Model.PacientData[]> {
-    return this.httpClient.get<Model.PacientData[]>('data/user.json');
+    return this.httpClient.get<Model.PacientData[]>('data/user.json')
+    .pipe(
+      map(item => item.filter(item => item.statusExam !== '')),
+    );
   }
 
   getUser(id: number): Observable<Model.PacientData[]> {

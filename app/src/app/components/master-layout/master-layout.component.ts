@@ -42,7 +42,7 @@ export class MasterLayoutComponent implements OnInit {
     
     {
       name: 'Histórico',
-      path: '/pacient/history/3'
+      path: '/pacient/history/7'
     },
     {
       name: 'Médicos',
@@ -85,8 +85,10 @@ export class MasterLayoutComponent implements OnInit {
       this.profileName = 'Médico';
     } else if(this.href.includes('medical-clinic')) {
       this.profileType = 'medical-clinic';
+      this.profileName = 'Clinica Médica';
     }else if(this.href.includes('pacient')) {
       this.profileType = 'pacient';
+      this.profileName = 'Paciente';
     }
 
   }

@@ -18,6 +18,7 @@ export interface PacientData {
   state: string;
   city: string;
   notes: string;
+  statusExam?: string;
 }
 
 export interface MedicalRecords {
