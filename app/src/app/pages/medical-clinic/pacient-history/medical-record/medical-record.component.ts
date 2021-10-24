@@ -54,9 +54,6 @@ export class MedicalRecordComponent {
     });
 
     dialogRef.afterClosed().subscribe(result => {
-      if (result) {
-        console.log(item);
-      };
       const updatedItem = this.medicalPrescriptionsList.filter(i => i.id === item.id);
       updatedItem[0].result = '../../../../../assets/images/results/r-01.jpg';
 
