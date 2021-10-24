@@ -51,4 +51,8 @@ export class DoctorService {
   getDoctors(): Observable<Model.Doctor[]> {
     return this.httpClient.get<Model.Doctor[]>('data/doctor.json');
   }
+
+  getClinics(): Observable<Model.Doctor[]> {
+    return this.httpClient.get<Model.Doctor[]>('data/medical-clinic.json');
+  }
 }
