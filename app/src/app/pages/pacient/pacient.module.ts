@@ -11,11 +11,13 @@ import { GeneralInformationComponent } from './history/general-information/gener
 import { MedicalRecordComponent } from './history/medical-record/medical-record.component';
 import { ExamsComponent } from './history/exams/exams.component';
 import { MedicalPrescriptionsComponent } from './history/medical-prescriptions/medical-prescriptions.component';
+import { ManagementModalPrescriptionComponent } from './history/medical-prescriptions/management-modal-prescription/management-modal-prescription.component';
 import { SharedExamsComponent } from './history/shared-exams/shared-exams.component';
 import { ManagementModalComponent } from './history/exams/management-modal/management-modal.component';
 import { ManagementModalRecordsComponent } from './history/medical-record/management-modal/management-modal.component';
 import { ViewExamModalComponent } from './history/shared-exams/view-exam-modal/view-exam-modal.component';
 import { DoctorListComponent } from './doctor-list/doctor-list.component';
+
 
 
 @NgModule({
@@ -30,7 +32,8 @@ import { DoctorListComponent } from './doctor-list/doctor-list.component';
     ManagementModalComponent,
     ManagementModalRecordsComponent,
     ViewExamModalComponent,
-    DoctorListComponent
+    DoctorListComponent,
+    ManagementModalPrescriptionComponent
   ],
   imports: [
     CommonModule,

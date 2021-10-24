@@ -42,7 +42,7 @@ export class MasterLayoutComponent implements OnInit {
     
     {
       name: 'Histórico',
-      path: '/pacient/history'
+      path: '/pacient/history/3'
     },
     {
       name: 'Médicos',

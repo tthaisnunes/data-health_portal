@@ -6,6 +6,7 @@ import { MedicalPrescriptions } from '../../pacient.model';
 import { DoctorService } from '../../pacient.service';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
+import { ManagementModalPrescriptionComponent } from './management-modal-prescription/management-modal-prescription.component';
 
 @Component({
   selector: 'app-medical-prescriptions',
@@ -40,5 +41,14 @@ export class MedicalPrescriptionsComponent implements OnInit {
   applyFilter(event: Event) {
     const filterValue = (event.target as HTMLInputElement).value;
     this.dataSource.filter = filterValue.trim().toLowerCase();
+  }
+
+  openDialogManagement(item?: MedicalPrescriptions) {
+    const dialogRef = this.dialog.open(ManagementModalPrescriptionComponent, {
+      width: '1080px',
+      data: {
+        ...item
+      }
+    });
   }
 }

@@ -1,12 +1,17 @@
 .content-modal {
+  min-height: 60vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
 .form {
-  min-width: 300px;
+  min-width: 150px;
   width: 100%;
+
+  textarea {
+    min-height: 50vh;
+  }
 }
 
 .full-width {
@@ -21,9 +26,5 @@ h2 {
 .button-container {
   display: flex;
   justify-content: flex-end;
-
-  button{
-    margin-left: 1rem;
-  }
 }
 

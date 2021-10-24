@@ -44,7 +44,7 @@ export class ExamsComponent implements OnInit {
     this.dataSource.filter = filterValue.trim().toLowerCase();
   }
 
-  openDialogManagement() {
+  openDialogManagement(item: Exams) {
     const dialogRef = this.dialog.open(ManagementModalComponent, {
       width: '500px',
       data: {}
@@ -52,14 +52,10 @@ export class ExamsComponent implements OnInit {
 
     dialogRef.afterClosed().subscribe(result => {
       if (result) {
-        this.examsList.push({
-          id: 999,
-          date: new Date(),
-          description: result.description,
-          userId: this.userId,
-          status: 'solicitado',
-          statusColor: 'grey'
-        });
+        const updatedItem = this.examsList.filter(i => i.id === item.id);
+        updatedItem[0].status = 'Compartilhado';
+        updatedItem[0].statusColor = 'green';
+  
 
         this.dataSource = new MatTableDataSource(this.examsList);
 

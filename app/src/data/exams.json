@@ -28,8 +28,8 @@
     "id": 4, 
     "date": "9/6/21", 
     "description": "Hemograma plaquetas total", 
-    "status": "Solicitado",
-    "statusColor": "grey",
+    "status": "Finalizado",
+    "statusColor": "blue",
     "userId": 7
   },
   {

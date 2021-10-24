@@ -1,13 +1,9 @@
 <div class="content-modal">
-  <h2>Solicitação de exame</h2>
-  <form class="form">
-    <mat-form-field class="full-width" appearance="fill">
-      <mat-label>Nome do exame</mat-label>
-      <input matInput placeholder="Hemograma plaquetas" name="data" [(ngModel)]="data.description">
-    </mat-form-field>
+  <h2>Compartilhar Exame</h2>
+  <p>Deseja compartilhar o resultado do seu exame com seu médico?</p>
 
-    <div class="button-container">
-      <button mat-raised-button color="accent" [mat-dialog-close]="data">Salvar</button>
-    </div>
-  </form>
+  <div class="button-container">
+    <button mat-raised-button color="primary" [mat-dialog-close]>Cancelar</button>
+    <button mat-raised-button color="accent" [mat-dialog-close]="data">Compartilhar</button>
+  </div>
 </div>
