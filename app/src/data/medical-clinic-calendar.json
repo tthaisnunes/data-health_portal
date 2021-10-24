@@ -7,8 +7,8 @@
     "color": "colors.grey"
   },
   {
-    "start": "addHours(startOfDay(new Date()), 12)",
-    "end": "addHours(startOfDay(new Date()), 13)",
+    "start": "ddDays(addHours(startOfDay(new Date()), 15), 11)",
+    "end": "ddDays(addHours(startOfDay(new Date()), 16), 11)",
     "title": "Exame - Luan Oliveira",
     "id": 2,
     "color": "colors.grey"
@@ -21,8 +21,8 @@
     "color": "colors.grey"
   },
   {
-    "start": "addHours(startOfDay(new Date()), 16)",
-    "end": "addHours(startOfDay(new Date()), 18)",
+    "start": "addDays(addHours(startOfDay(new Date()), 12), 12)",
+    "end": "addDays(addHours(startOfDay(new Date()), 13), 12)",
     "title": "Exame - Abigail Fidalgo",
     "id": 4,
     "color": "colors.grey"

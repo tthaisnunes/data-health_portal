@@ -20,36 +20,29 @@ export class DashboardMedicalClinicComponent {
     {
       start: addHours(startOfDay(new Date()), 15),
       end: addHours(startOfDay(new Date()), 16),
-      title: 'Consulta - Maria Sousa',
+      title: 'Exame - Pedro Santos',
       id: 1,
       color: colors.grey,
     },
     {
-      start: addHours(startOfDay(new Date()), 12),
-      end: addHours(startOfDay(new Date()), 13),
-      title: 'Consulta - José Silva',
+      start: addDays(addHours(startOfDay(new Date()), 15), 11),
+      end: addDays(addHours(startOfDay(new Date()), 16), 11),
+      title: 'Exame - Luan Oliveira',
       id: 2,
       color: colors.grey,
     },
     {
       start: addHours(startOfDay(new Date()), 17),
       end: addHours(startOfDay(new Date()), 18),
-      title: 'Retorno - Pedro Santos',
+      title: 'Exame - Osvaldo Pereira',
       id: 3,
-      color: colors.green,
-    },
-    {
-      start: addDays(addHours(startOfDay(new Date()), 12), 8),
-      end: addDays(addHours(startOfDay(new Date()), 13), 8),
-      title: 'Consulta - Jessica Fernandes',
-      id: 4,
       color: colors.grey,
     },
     {
-      start: addDays(addHours(startOfDay(new Date()), 16), 9),
-      end: addDays(addHours(startOfDay(new Date()), 18), 9),
-      title: 'Consulta - Amanda Silva',
-      id: 5,
+      start: addDays(addHours(startOfDay(new Date()), 12), 12),
+      end: addDays(addHours(startOfDay(new Date()), 13), 12),
+      title: 'Exame - Abigail Fidalgo',
+      id: 4,
       color: colors.grey,
     },
     {
@@ -63,31 +56,32 @@ export class DashboardMedicalClinicComponent {
 
   indicators: Indicator[] = [
     {
-      label: "Consultas canceladas último mês",
-      value: 3,
-      color: "red",
-      status: "down",
-      icon: "report_gmailerrorred",
-      history: "-10%"
-    },
-    {
-      label: "Consultas realizadas último mês",
-      value: 52,
+      label: "Exames realizados último mês",
+      value: 114,
       color: "blue",
       status: "up",
       icon: "perm_contact_calendar",
-      history: "+23%"
+      history: "+12%"
     },
     {
-      label: "Retornos realizados último mês",
-      value: 39,
+      label: "Exames encaminhados último mês",
+      value: 102,
       color: "green",
       status: "up",
       icon: "history",
-      history: "+33%"
-    }, {
-      label: "Média atendimentos últimos 12 meses",
-      value: 45,
+      history: "+15%"
+    }, 
+    {
+      label: "Exames cancelados último mês",
+      value: 12,
+      color: "red",
+      status: "down",
+      icon: "report_gmailerrorred",
+      history: "-7%"
+    },
+    {
+      label: "Exames realizados últimos 12 meses",
+      value: 983,
       color: "yellow",
       status: "down",
       icon: "stacked_bar_chart",
