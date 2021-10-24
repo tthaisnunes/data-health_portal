@@ -1,1 +1,7 @@
-<p>calendar works!</p>
+<div class="button-container">
+  <button mat-raised-button color="accent">Bloquear agenda</button>
+</div>
+
+<app-calendar [view]="view" [viewDate]="viewDate" [activeDayIsOpen]="activeDayIsOpen" [hourSegments]="hourSegments"
+[dayStartHour]="dayStartHour" [dayEndHour]="dayEndHour" [showMonth]="true" [showDay]="true" [events]="events">
+</app-calendar>
