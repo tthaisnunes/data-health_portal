@@ -34,14 +34,15 @@ export class MasterLayoutComponent implements OnInit {
     },
     {
       name: 'Pacientes',
-      path: '/medical-clinic/pacient-history'
+      path: '/medical-clinic/pacient-list'
     }
   ];
 
   pacientMenu = [
+    
     {
-      name: 'Dashboard',
-      path: '/pacient/dashboard'
+      name: 'Histórico',
+      path: '/pacient/history'
     },
     {
       name: 'Médicos',
@@ -50,10 +51,6 @@ export class MasterLayoutComponent implements OnInit {
     {
       name: 'Clínicas',
       path: '/pacient/medical-clinic-list'
-    },
-    {
-      name: 'Histórico',
-      path: '/pacient/history'
     },
   ];
 

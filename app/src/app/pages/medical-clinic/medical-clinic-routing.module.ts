@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { DashboardMedicalClinicComponent } from './dashboard/dashboard.component';
 import { CalendarClinicComponent } from './calendar/calendar.component';
+import { PacientListComponent } from './pacient-list/pacient-list.component';
 import { PacientHistoryComponent } from './pacient-history/pacient-history.component';
 
 const routes: Routes = [
@@ -15,7 +16,11 @@ const routes: Routes = [
     component: CalendarClinicComponent
   },
   {
-    path: 'pacient-history',
+    path: 'pacient-list',
+    component: PacientListComponent
+  },
+  {
+    path: 'pacient-list/pacient-history/:id',
     component: PacientHistoryComponent
   }
 ];
