@@ -65,7 +65,7 @@
     "state": "PE",
     "city": "Recife",
     "notes": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    "statusExam": "Guia Enviada",
+    "statusExam": "Guia Recebida",
     "statusExamColor": "grey"
   },
   {
@@ -157,7 +157,7 @@
     "state": "RS",
     "city": "Porto Alegre",
     "notes": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    "statusExam": "Guia Enviada",
+    "statusExam": "Guia Recebida",
     "statusExamColor": "grey"
   },
   {
@@ -295,7 +295,7 @@
     "state": "BA",
     "city": "Ilhéus",
     "notes": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    "statusExam": "Guia Enviada",
+    "statusExam": "Guia Recebida",
     "statusExamColor": "grey"
   },
   {
@@ -410,7 +410,7 @@
     "state": "PR",
     "city": "Curitiba",
     "notes": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    "statusExam": "Guia Enviada",
+    "statusExam": "Guia Recebida",
     "statusExamColor": "grey"
   },
   {

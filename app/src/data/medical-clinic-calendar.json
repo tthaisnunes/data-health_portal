@@ -1,0 +1,37 @@
+[
+  {
+    "start": "addHours(startOfDay(new Date()), 15)",
+    "end": "addHours(startOfDay(new Date()), 16)",
+    "title": "Exame - Pedro Santos",
+    "id": 1,
+    "color": "colors.grey"
+  },
+  {
+    "start": "addHours(startOfDay(new Date()), 12)",
+    "end": "addHours(startOfDay(new Date()), 13)",
+    "title": "Exame - Luan Oliveira",
+    "id": 2,
+    "color": "colors.grey"
+  },
+  {
+    "start": "addHours(startOfDay(new Date()), 17)",
+    "end": "addHours(startOfDay(new Date()), 18)",
+    "title": "Exame - Osvaldo Pereira",
+    "id": 3,
+    "color": "colors.grey"
+  },
+  {
+    "start": "addHours(startOfDay(new Date()), 16)",
+    "end": "addHours(startOfDay(new Date()), 18)",
+    "title": "Exame - Abigail Fidalgo",
+    "id": 4,
+    "color": "colors.grey"
+  },
+  {
+    "start": "subDays(endOfMonth(new Date()), 3)",
+    "end": "addDays(endOfMonth(new Date()), 3)",
+    "title": "Agenda bloqueada",
+    "color": "colors.red",
+    "allDay": true
+  }
+]
