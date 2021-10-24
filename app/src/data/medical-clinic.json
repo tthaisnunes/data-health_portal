@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "name": "Clínica Corações",
+    "area": "Cargiologia",
+    "calendar": []
+  },
+  {
+    "id": 2,
+    "name": "Laboratório Exames",
+    "area": "Geral",
+    "calendar": []
+  },
+  {
+    "id": 3,
+    "name": "Clínica Endocrinologia",
+    "area": "Endocrinologia",
+    "calendar": []
+  },
+  {
+    "id": 4,
+    "name": "Laboratório Viva Mais",
+    "area": "Geral",
+    "calendar": []
+  }
+]
