@@ -1,11 +1,15 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { CalendarEvent, CalendarView } from 'angular-calendar';
 import { addDays, addHours, endOfMonth, startOfDay, subDays } from 'date-fns';
 import colors from '../../../../components/shared/colors';
-import Indicator from '../../../../components/indicator/indicator.model';
+import { Subject } from 'rxjs';
+
+import { ModalScheduleComponent } from '../../../../components/modal-schedule/modal-schedule.component';
 
 @Component({
   selector: 'app-view-calendar-modal',
+  changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './view-calendar-modal.component.html',
   styleUrls: ['./view-calendar-modal.component.scss']
 })
@@ -62,5 +66,31 @@ export class ViewCalendarModalComponent {
       allDay: true,
     }
   ];
+  refresh: Subject<any> = new Subject();
+
+  constructor(
+    public dialog: MatDialog
+  ) { }
+
+  refreshView(): void {
+    this.refresh.next();
+  }
+
+  openDialog() {
+    const dialogRef = this.dialog.open(ModalScheduleComponent, {
+      width: '500px'
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      this.events.push({
+        start: addHours(startOfDay(result.date), result.hour),
+        end: addHours(startOfDay(result.date), Number(result.hour) + 1),
+        title: 'Consulta agendada',
+        color: colors.green,
+      });
+
+      this.refreshView();
+    });
+  }
 
 }

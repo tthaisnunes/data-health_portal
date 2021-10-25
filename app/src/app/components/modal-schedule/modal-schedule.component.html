@@ -1,0 +1,26 @@
+<div class="content-modal">
+  <h2>Adicionar evento</h2>
+  <form class="form">
+    <p>Escolha um dia:</p>
+    <mat-form-field appearance="fill">
+      <mat-label>Escolha uma data</mat-label>
+      <input matInput [matDatepicker]="picker" [(ngModel)]="data.date" name="date">
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+
+    <p>Escolha um horário</p>
+    <mat-form-field appearance="fill">
+      <mat-label>Horários:</mat-label>
+      <mat-select [(ngModel)]="data.hour" name="selectedValue">
+        <mat-option *ngFor="let item of hours" [value]="item.id">
+          {{item.name}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <div class="button-container">
+      <button mat-raised-button color="accent" [mat-dialog-close]="data">Agendar</button>
+    </div>
+  </form>
+</div>

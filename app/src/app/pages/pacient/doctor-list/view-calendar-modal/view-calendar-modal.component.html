@@ -1,7 +1,7 @@
 <div class="button-container">
-  <button mat-raised-button color="accent">Agendar consulta</button>
+  <button mat-raised-button color="accent" (click)="openDialog()">Agendar consulta</button>
 </div>
 
 <app-calendar [view]="view" [viewDate]="viewDate" [activeDayIsOpen]="activeDayIsOpen" [hourSegments]="hourSegments"
-[dayStartHour]="dayStartHour" [dayEndHour]="dayEndHour" [showMonth]="false" [showDay]="false" [showWeek]="true" [events]="events">
+[dayStartHour]="dayStartHour" [dayEndHour]="dayEndHour" [showMonth]="true" [showDay]="true" [showWeek]="false" [events]="events">
 </app-calendar>

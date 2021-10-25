@@ -3,6 +3,7 @@ import { registerLocaleData } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgApexchartsModule } from 'ng-apexcharts';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule }   from '@angular/forms';
 
 import { AuthModule } from './components/auth/auth.module';
 import { SharedModule } from './components/shared/shared.module';
@@ -27,6 +28,7 @@ import { ViewCalendarModalComponent } from './pages/pacient/doctor-list/view-cal
 import { ViewCalendarClinicModalComponent } from './pages/pacient/medical-clinic-list/view-calendar-clinic-modal/view-calendar-clinic-modal.component';
 import { CalendarClinicComponent } from './pages/medical-clinic/calendar/calendar.component';
 import { DashboardMedicalClinicComponent } from './pages/medical-clinic/dashboard/dashboard.component';
+import { ModalScheduleComponent } from './components/modal-schedule/modal-schedule.component';
 
 registerLocaleData(localePt, 'pt');
 
@@ -46,7 +48,8 @@ export function momentAdapterFactory() {
     ViewCalendarModalComponent,
     ViewCalendarClinicModalComponent,
     CalendarClinicComponent,
-    DashboardMedicalClinicComponent
+    DashboardMedicalClinicComponent,
+    ModalScheduleComponent
   ],
   imports: [
     BrowserModule,
@@ -57,7 +60,8 @@ export function momentAdapterFactory() {
     SharedModule,
     NgApexchartsModule,
     NgxMaskModule.forRoot(),
-    CalendarModule.forRoot({ provide: DateAdapter, useFactory: momentAdapterFactory })
+    CalendarModule.forRoot({ provide: DateAdapter, useFactory: momentAdapterFactory }),
+    FormsModule
   ],
   providers: [{ provide: MAT_DATE_LOCALE, useValue: 'pt-BR' },],
   bootstrap: [AppComponent]
