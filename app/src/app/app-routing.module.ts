@@ -19,6 +19,11 @@ const routes: Routes = [
     component: ForgotPasswordComponent
   },
   {
+    path: '',
+    redirectTo: 'doctor/dashboard',
+    pathMatch: 'full'
+  },
+  {
     path: 'doctor',
     component: MasterLayoutComponent,
     loadChildren: () => import('./pages/doctor/doctor.module').then(m => m.DoctorModule),

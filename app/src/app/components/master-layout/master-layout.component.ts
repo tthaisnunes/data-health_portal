@@ -39,7 +39,7 @@ export class MasterLayoutComponent implements OnInit {
   ];
 
   pacientMenu = [
-    
+
     {
       name: 'Histórico',
       path: '/pacient/history/7'
@@ -79,16 +79,20 @@ export class MasterLayoutComponent implements OnInit {
 
   ngOnInit() {
     this.href = this.router.url;
-    
-    if(this.href.includes('doctor')) {
+    const arrHref = this.href.split('/');
+
+    if (arrHref[1].includes('doctor')) {
       this.profileType = 'doctor';
       this.profileName = 'Médico';
-    } else if(this.href.includes('medical-clinic')) {
+    } else if (arrHref[1].includes('medical-clinic')) {
       this.profileType = 'medical-clinic';
       this.profileName = 'Clinica Médica';
-    }else if(this.href.includes('pacient')) {
+    } else if (arrHref[1].includes('pacient')) {
       this.profileType = 'pacient';
       this.profileName = 'Paciente';
+    } else {
+      this.profileType = 'doctor';
+      this.profileName = 'Médico';
     }
 
   }

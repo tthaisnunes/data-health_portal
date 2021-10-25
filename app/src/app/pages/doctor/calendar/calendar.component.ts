@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { CalendarEvent, CalendarView } from 'angular-calendar';
-import { addDays, addHours, endOfMonth, startOfDay, subDays } from 'date-fns';
+import { addDays, addHours, endOfMonth, startOfDay, startOfMonth, subDays } from 'date-fns';
 import colors from '../../../components/shared/colors';
 import Indicator from '../../../components/indicator/indicator.model';
 import { Subject } from 'rxjs';
@@ -57,8 +57,8 @@ export class CalendarDoctorComponent {
       color: colors.grey
     },
     {
-      start: subDays(endOfMonth(new Date()), 3),
-      end: addDays(endOfMonth(new Date()), 3),
+      start: subDays(startOfMonth(new Date()), 3),
+      end: addDays(startOfMonth(new Date()), 3),
       title: "Agenda bloqueada",
       color: colors.red,
       allDay: true
