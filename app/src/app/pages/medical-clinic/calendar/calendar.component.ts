@@ -21,39 +21,39 @@ export class CalendarClinicComponent {
     {
       start: addHours(startOfDay(new Date()), 15),
       end: addHours(startOfDay(new Date()), 16),
-      title: 'Exame - Pedro Santos',
+      title: "Exame - Pedro Santos",
       id: 1,
-      color: colors.grey,
+      color: colors.grey
     },
     {
       start: addDays(addHours(startOfDay(new Date()), 15), 11),
       end: addDays(addHours(startOfDay(new Date()), 16), 11),
-      title: 'Exame - Luan Oliveira',
+      title: "Exame - Luan Oliveira",
       id: 2,
-      color: colors.grey,
+      color: colors.grey
     },
     {
       start: addHours(startOfDay(new Date()), 17),
       end: addHours(startOfDay(new Date()), 18),
-      title: 'Exame - Osvaldo Pereira',
+      title: "Exame - Osvaldo Pereira",
       id: 3,
-      color: colors.grey,
+      color: colors.grey
     },
     {
       start: addDays(addHours(startOfDay(new Date()), 12), 12),
       end: addDays(addHours(startOfDay(new Date()), 13), 12),
-      title: 'Exame - Abigail Fidalgo',
+      title: "Exame - Abigail Fidalgo",
       id: 4,
-      color: colors.grey,
+      color: colors.grey
     },
     {
       start: subDays(endOfMonth(new Date()), 3),
       end: addDays(endOfMonth(new Date()), 3),
-      title: 'Agenda bloqueada',
+      title: "Agenda bloqueada",
       color: colors.red,
-      allDay: true,
+      allDay: true
     }
-  ];
+  ]
 
   indicators: Indicator[] = [
     {

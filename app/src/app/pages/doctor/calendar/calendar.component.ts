@@ -21,44 +21,149 @@ export class CalendarDoctorComponent {
     {
       start: addHours(startOfDay(new Date()), 15),
       end: addHours(startOfDay(new Date()), 16),
-      title: 'Consulta - Maria Sousa',
+      title: "Consulta - Maria Sousa",
       id: 1,
-      color: colors.grey,
+      color: colors.grey
     },
     {
       start: addHours(startOfDay(new Date()), 12),
       end: addHours(startOfDay(new Date()), 13),
-      title: 'Consulta - José Silva',
+      title: "Consulta - José Silva",
       id: 2,
-      color: colors.grey,
+      color: colors.grey
     },
     {
       start: addHours(startOfDay(new Date()), 17),
       end: addHours(startOfDay(new Date()), 18),
-      title: 'Retorno - Pedro Santos',
+      title: "Retorno - Pedro Santos",
       id: 3,
-      color: colors.green,
+      color: colors.green
     },
     {
       start: addDays(addHours(startOfDay(new Date()), 12), 5),
       end: addDays(addHours(startOfDay(new Date()), 13), 5),
-      title: 'Consulta - Jessica Fernandes',
+      title: "Consulta - Jessica Fernandes",
       id: 4,
-      color: colors.grey,
+      color: colors.grey
     },
     {
       start: addDays(addHours(startOfDay(new Date()), 16), 9),
       end: addDays(addHours(startOfDay(new Date()), 18), 9),
-      title: 'Consulta - Amanda Silva',
+      title: "Consulta - Amanda Silva",
       id: 5,
-      color: colors.grey,
+      color: colors.grey
     },
     {
       start: subDays(endOfMonth(new Date()), 3),
       end: addDays(endOfMonth(new Date()), 3),
-      title: 'Agenda bloqueada',
+      title: "Agenda bloqueada",
       color: colors.red,
-      allDay: true,
+      allDay: true
+    },
+    {
+      start: addDays(addHours(startOfDay(new Date()), 13), 12),
+      end: addDays(addHours(startOfDay(new Date()), 14), 12),
+      title: "Consulta - Gabriel Neves",
+      id: 6,
+      color: colors.grey
+    },
+    {
+      start: addDays(addHours(startOfDay(new Date()), 14), 6),
+      end: addDays(addHours(startOfDay(new Date()), 15), 6),
+      title: "Retorno - Luan Oliveira",
+      id: 7,
+      color: colors.green
+    },
+    {
+      start: addDays(addHours(startOfDay(new Date()), 9), 3),
+      end: addDays(addHours(startOfDay(new Date()), 10), 3),
+      title: "Retorno - Heloisa Souza",
+      id: 8,
+      color: colors.green
+    },
+    {
+      start: addDays(addHours(startOfDay(new Date()), 11), 8),
+      end: addDays(addHours(startOfDay(new Date()), 13), 8),
+      title: "Consulta - Renan Joli",
+      id: 9,
+      color: colors.grey
+    },
+    {
+      start: addDays(addHours(startOfDay(new Date()), 17), 21),
+      end: addDays(addHours(startOfDay(new Date()), 18), 21),
+      title: "Consulta - Guilherme Simioni",
+      id: 10,
+      color: colors.grey
+    },
+    {
+      start: addDays(addHours(startOfDay(new Date()), 10), 21),
+      end: addDays(addHours(startOfDay(new Date()), 11), 21),
+      title: "Retorno - Vinicius Sousa",
+      id: 11,
+      color: colors.green
+    },
+    {
+      start: addDays(addHours(startOfDay(new Date()), 7), 11),
+      end: addDays(addHours(startOfDay(new Date()), 8), 11),
+      title: "Consulta - Estela Santana",
+      id: 12,
+      color: colors.grey
+    },
+    {
+      start: addDays(addHours(startOfDay(new Date()), 6), 10),
+      end: addDays(addHours(startOfDay(new Date()), 8), 10),
+      title: "Retorno - Osvaldo Pereira",
+      id: 13,
+      color: colors.green
+    },
+    {
+      start: addDays(addHours(startOfDay(new Date()), 9), 10),
+      end: addDays(addHours(startOfDay(new Date()), 12), 10),
+      title: "Retorno - Damião Gomes",
+      id: 14,
+      color: colors.green
+    },
+    {
+      start: addDays(addHours(startOfDay(new Date()), 8), 10),
+      end: addDays(addHours(startOfDay(new Date()), 9), 10),
+      title: "Consulta - Sarah Macieira",
+      id: 15,
+      color: colors.grey
+    },
+    {
+      start: addDays(addHours(startOfDay(new Date()), 10), 30),
+      end: addDays(addHours(startOfDay(new Date()), 12), 30),
+      title: "Consulta - Marisol Jardim",
+      id: 16,
+      color: colors.grey
+    },
+    {
+      start: addDays(addHours(startOfDay(new Date()), 17), 35),
+      end: addDays(addHours(startOfDay(new Date()), 18), 35),
+      title: "Retorno - Yohan Trindade",
+      id: 17,
+      color: colors.green
+    },
+    {
+      start: addDays(addHours(startOfDay(new Date()), 15), 40),
+      end: addDays(addHours(startOfDay(new Date()), 16), 40),
+      title: "Retorno - Abigail Fidalgo",
+      id: 18,
+      color: colors.green
+    },
+    {
+      start: addDays(addHours(startOfDay(new Date()), 6), 33),
+      end: addDays(addHours(startOfDay(new Date()), 7), 33),
+      title: "Retorno - Cristian Esteves",
+      id: 19,
+      color: colors.green
+    },
+    {
+      start: addDays(addHours(startOfDay(new Date()), 12), 43),
+      end: addDays(addHours(startOfDay(new Date()), 14), 43),
+      title: "Consulta - Cândida Ávila",
+      id: 20,
+      color: colors.grey
     }
   ];
 
