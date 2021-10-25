@@ -1,9 +1,18 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div id="chart">
+<div id="chart" *ngIf="viewType === 'doctor'">
   <apx-chart
     [series]="chartOptions.series"
     [chart]="chartOptions.chart"
     [stroke]="chartOptions.stroke"
     [dataLabels]="chartOptions.dataLabels"
+  ></apx-chart>
+</div>
+
+<div id="chart" *ngIf="viewType === 'mc'">
+  <apx-chart
+    [series]="chartOptionsClinic.series"
+    [chart]="chartOptionsClinic.chart"
+    [stroke]="chartOptionsClinic.stroke"
+    [dataLabels]="chartOptionsClinic.dataLabels"
   ></apx-chart>
 </div>
