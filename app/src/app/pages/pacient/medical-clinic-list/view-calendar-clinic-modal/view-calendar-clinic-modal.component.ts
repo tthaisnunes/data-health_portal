@@ -82,14 +82,16 @@ export class ViewCalendarClinicModalComponent {
     });
 
     dialogRef.afterClosed().subscribe(result => {
-      this.events.push({
-        start: addHours(startOfDay(result.date), result.hour),
-        end: addHours(startOfDay(result.date), Number(result.hour) + 1),
-        title: 'Consulta agendada',
-        color: colors.green,
-      });
+      if (result) {
+        this.events.push({
+          start: addHours(startOfDay(result.date), result.hour),
+          end: addHours(startOfDay(result.date), Number(result.hour) + 1),
+          title: 'Consulta agendada',
+          color: colors.green,
+        });
 
-      this.refreshView();
+        this.refreshView();
+      }
     });
   }
 }

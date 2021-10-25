@@ -3,6 +3,9 @@ import { CalendarEvent, CalendarView } from 'angular-calendar';
 import { addDays, addHours, endOfMonth, startOfDay, subDays } from 'date-fns';
 import colors from '../../../components/shared/colors';
 import Indicator from '../../../components/indicator/indicator.model';
+import { Subject } from 'rxjs';
+import { MatDialog } from '@angular/material/dialog';
+import { ModalScheduleComponent } from '../../../components/modal-schedule/modal-schedule.component';
 @Component({
   selector: 'app-calendar-doctor',
   templateUrl: './calendar.component.html',
@@ -199,5 +202,34 @@ export class CalendarDoctorComponent {
       icon: "stacked_bar_chart",
       history: "-13%"
     }
-  ]
+  ];
+
+  refresh: Subject<any> = new Subject();
+
+  constructor(
+    public dialog: MatDialog
+  ) { }
+
+  refreshView(): void {
+    this.refresh.next();
+  }
+
+  openDialog() {
+    const dialogRef = this.dialog.open(ModalScheduleComponent, {
+      width: '500px'
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      if (result) {
+        this.events.push({
+          start: addHours(startOfDay(result.date), result.hour),
+          end: addHours(startOfDay(result.date), Number(result.hour) + 1),
+          title: 'Agenda bloqueada',
+          color: colors.red,
+        });
+      }
+
+      this.refreshView();
+    });
+  }
 }
