@@ -10,7 +10,6 @@ export class ModalScheduleComponent implements OnInit {
     {id: 6, name: '06:00'},
     {id: 7, name: '07:00'},
     {id: 8, name: '08:00'},
-    {id: 8, name: '08:00'},
     {id: 9, name: '09:00'},
     {id: 10, name: '10:00'},
     {id: 11, name: '11:00'},
